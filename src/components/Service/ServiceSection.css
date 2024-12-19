@@ -1,0 +1,94 @@
+.sectors-section {
+    padding: 50px 20px;
+    background-color: #f8f9fa;
+    text-align: center;
+    width: 80%;
+    margin: auto;
+}
+
+.sectors-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+/* Top row grid styling */
+.top-sectors-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* 4 items in the top row */
+    gap: 20px;
+    justify-items: center;
+    margin-bottom: 20px;
+    /* Space between top and bottom rows */
+}
+
+/* Bottom row grid styling */
+.bottom-sectors-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* Ensure it has 4 columns */
+    gap: 0px;
+    justify-items: center;
+}
+
+/* Sector card styling */
+.sector-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    /* Specific width for each card */
+    max-width: 250px;
+    /* Ensure the card does not exceed 250px */
+}
+
+/* Hover effect */
+.sector-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Sector icon styling */
+.sector-icon {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 5px;
+}
+
+/* Sector name */
+.sector-name {
+    font-size: 1.2rem;
+    color: #333;
+    font-weight: bold;
+}
+
+/* Responsive behavior */
+@media (max-width: 768px) {
+    .sector-icon {
+        width: 60px;
+        height: 60px;
+    }
+
+    .sector-name {
+        font-size: 1rem;
+    }
+
+    /* Adjust width of the cards for smaller screens */
+    .sector-card {
+        width: 200px;
+        max-width: 200px;
+    }
+
+    /* Adjust the grid layout for smaller screens */
+    .top-sectors-grid,
+    .bottom-sectors-grid {
+        grid-template-columns: repeat(2, 1fr);
+        /* 2 items per row for small screens */
+    }
+}

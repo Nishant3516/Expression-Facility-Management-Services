@@ -1,63 +1,75 @@
 .benefits-container {
-    padding: 40px 20px;
-    background-color: #f8f8f8;
+    padding: 50px 20px;
+    background-color: #f8f9fa;
     text-align: center;
+    width: 80%;
+    margin: auto;
 }
 
 .benefits-title {
     font-size: 2.5rem;
-    margin-bottom: 40px;
+    font-weight: bold;
+    margin-bottom: 30px;
     color: #333;
 }
 
-.benefits-list {
+.benefits-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 30px;
+    grid-template-rows: auto auto;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.benefits-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
 }
 
 .benefit-card {
-    background-color: #fff;
+    background-color: #B8E0EB;
+    border: 1px solid #ddd;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 30px;
+    padding: 20px;
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.benefit-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    max-width: 250px;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .benefit-icon {
-    font-size: 3rem;
-    margin-bottom: 20px;
-    color: #4caf50;
+    font-size: 50px;
+    margin-bottom: 15px;
 }
 
 .benefit-title {
     font-size: 1.5rem;
-    margin-bottom: 15px;
     color: #333;
+    font-weight: bold;
 }
 
 .benefit-description {
-    font-size: 1rem;
+    font-size: 0.9rem;
     color: #666;
-    line-height: 1.5;
+    height: 90px;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 @media (max-width: 768px) {
-    .benefits-container {
-        padding: 20px;
-    }
-
-    .benefits-title {
-        font-size: 2rem;
+    .benefits-row {
+        grid-template-columns: repeat(2, 1fr);
     }
 
     .benefit-card {
-        padding: 20px;
+        width: 100%;
+        max-width: 100%;
     }
 }

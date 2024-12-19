@@ -4,55 +4,93 @@ import './Benefits.css';
 const benefitsData = [
   {
     id: 1,
-    title: 'High-Quality Standards',
+    title: 'Comprehensive Solutions',
     description:
-      'We pride ourselves on delivering services that adhere to the highest quality standards. From spotless housekeeping to top-notch linen management and effective pest control, we maintain consistency in quality and efficiency.',
-    icon: '🏆', // You can replace this with an icon from a library like Font Awesome or Material Icons
+      'One-stop solution for housekeeping, security, linen, and pest control, ensuring quality under one roof.',
+    icon: '🛠️',
   },
   {
     id: 2,
-    title: 'Reliability & Consistency',
+    title: 'Professional Expertise',
     description:
-      'Our clients can count on us for reliable and timely service delivery, ensuring that operations run smoothly without interruptions. We are committed to maintaining a consistent level of service excellence that you can depend on every day.',
-    icon: '🔒',
+      'Highly trained professionals in cleaning, security, linen, and pest control, ensuring high standards.',
+    icon: '👨‍🔬',
   },
   {
     id: 3,
-    title: 'Eco-friendly Practices',
+    title: 'Tailored Approach',
     description:
-      'We prioritize sustainability by using eco-friendly cleaning products and pest control methods, reducing environmental impact while ensuring your space remains safe and hygienic.',
-    icon: '🌱',
+      'Customized services to meet unique client needs, ensuring alignment with your business goals.',
+    icon: '⚙️',
   },
   {
     id: 4,
-    title: 'Cost-Effective',
+    title: 'High-Quality Standards',
     description:
-      'By offering competitive pricing and bundled services, we help you reduce costs while maintaining high standards of quality. We ensure that our services provide excellent value for money.',
-    icon: '💸',
+      'Adhering to high standards in housekeeping, linen management, and pest control for consistency.',
+    icon: '🏆',
   },
   {
     id: 5,
+    title: 'Reliability & Consistency',
+    description:
+      'Reliable and timely service delivery, ensuring smooth operations with consistent excellence.',
+    icon: '🔒',
+  },
+  {
+    id: 6,
+    title: 'Eco-friendly Practices',
+    description:
+      'Eco-friendly methods in cleaning and pest control, reducing environmental impact while ensuring safety.',
+    icon: '🌱',
+  },
+  {
+    id: 7,
+    title: 'Cost-Effective',
+    description:
+      'Competitive pricing and bundled services to reduce costs while maintaining high standards.',
+    icon: '💸',
+  },
+  {
+    id: 8,
     title: 'Peace of Mind',
     description:
-      'With our comprehensive services, you can have peace of mind knowing that your facility is clean, secure, well-maintained, and pest-free. We handle the details so you can focus on your core business.',
+      'Ensuring your facility is clean, secure, and pest-free so you can focus on your core business.',
     icon: '🕊️',
   },
 ];
 
 const Benefits = () => {
+  const firstRow = benefitsData.slice(0, 4); 
+  const secondRow = benefitsData.slice(4); 
+
   return (
     <div className="benefits-container">
       <h2 className="benefits-title">Why Choose Us?</h2>
-      <div className="benefits-list">
-        {benefitsData.map((benefit) => (
-          <div key={benefit.id} className="benefit-card">
-            <div className="benefit-icon">
-              <span>{benefit.icon}</span>
+      <div className="benefits-grid">
+        <div className="benefits-row">
+          {firstRow.map((benefit) => (
+            <div key={benefit.id} className="benefit-card">
+              <div className="benefit-icon">
+                <span>{benefit.icon}</span>
+              </div>
+              <h3 className="benefit-title">{benefit.title}</h3>
+              {/* <p className="benefit-description">{benefit.description}</p> */}
             </div>
-            <h3 className="benefit-title">{benefit.title}</h3>
-            <p className="benefit-description">{benefit.description}</p>
-          </div>
-        ))}
+          ))}
+        </div>
+        
+        <div className="benefits-row">
+          {secondRow.map((benefit) => (
+            <div key={benefit.id} className="benefit-card">
+              <div className="benefit-icon">
+                <span>{benefit.icon}</span>
+              </div>
+              <h3 className="benefit-title">{benefit.title}</h3>
+              {/* <p className="benefit-description">{benefit.description}</p> */}
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );

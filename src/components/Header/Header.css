@@ -8,6 +8,8 @@
     position: relative;
     background-color: #fff;
     z-index: 1000;
+    width: 80%;
+    margin: auto;
 }
 
 /* Logo styling */
