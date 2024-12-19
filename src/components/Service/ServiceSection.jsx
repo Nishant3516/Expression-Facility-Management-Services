@@ -21,13 +21,13 @@ const topSectorsData = [
   { id: 1, title: 'Housekeeping Services', description: 'Description for Service 1', backgroundImage: bgImage },
   { id: 2, title: 'Security Services', description: 'Description for Service 2', backgroundImage: bgImage },
   { id: 3, title: 'Pest Control Services', description: 'Description for Service 3', backgroundImage: bgImage },
+  { id: 4, title: 'Linen & Laundry Services', description: 'Description for Service 4', backgroundImage: bgImage },
+  { id: 5, title: 'Bio Medical Waste', description: 'Description for Service 5', backgroundImage: bgImage },
+  { id: 6, title: 'Ward Boy Services', description: 'Description for Service 6', backgroundImage: bgImage },
 ];
 
-const bottomSectorsData = [
-    { id: 4, title: 'Linen & Laundry Services', description: 'Description for Service 4', backgroundImage: bgImage },
-    { id: 5, title: 'Bio Medical Waste', description: 'Description for Service 5', backgroundImage: bgImage },
-    { id: 6, title: 'Ward Boy Services', description: 'Description for Service 6', backgroundImage: bgImage },
-  ];
+// const bottomSectorsData = [
+//   ];
 
 function ServiceSection() {
   return (
@@ -42,11 +42,11 @@ function ServiceSection() {
       </div>
 
       {/* Bottom sectors grid */}
-      <div className="bottom-sectors-grid">
-        {bottomSectorsData.map((sector, index) => (
+      {/* <div className="bottom-sectors-grid"> */}
+        {/* {bottomSectorsData.map((sector, index) => (
           <ServiceCard key={index} title={sector.title} icon={sector.icon} />
         ))}
-      </div>
+      </div> */}
     </section>
   );
 }

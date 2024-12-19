@@ -32,44 +32,44 @@ function Header() {
   }, []);
 
   return (
+
     <header className="header">
-      {/* Logo always visible on the left */}
-      <div className="logo">
-        <img src={logo} alt="Logo" />
+      <div className="mainHeaderDiv">
+        {/* Logo always visible on the left */}
+        <div className="logo">
+          <img src={logo} alt="Logo" />
+        </div>
+
+        <button
+          className="hamburger-menu"
+          onClick={toggleMenu}
+          ref={hamburgerRef}
+        >
+          <span className="bar"></span>
+          <span className="bar"></span>
+          <span className="bar"></span>
+        </button>
+        <nav>
+          <ul className={`nav-list ${isMenuOpen ? 'open' : ''}`} ref={menuRef}>
+            <li>
+              <Link to="/" onClick={() => setIsMenuOpen(false)}>
+                Home
+              </Link>
+            </li>
+            <li>
+              <Link to="/about" onClick={() => setIsMenuOpen(false)}>
+                About
+              </Link>
+            </li>
+            <li>
+              <Link to="/contact" onClick={() => setIsMenuOpen(false)}>
+                Contact
+              </Link>
+            </li>
+          </ul>
+        </nav>
       </div>
-
-      {/* Hamburger menu button */}
-      <button
-        className="hamburger-menu"
-        onClick={toggleMenu}
-        ref={hamburgerRef}
-      >
-        <span className="bar"></span>
-        <span className="bar"></span>
-        <span className="bar"></span>
-      </button>
-
-      {/* Navigation links */}
-      <nav>
-        <ul className={`nav-list ${isMenuOpen ? 'open' : ''}`} ref={menuRef}>
-          <li>
-            <Link to="/" onClick={() => setIsMenuOpen(false)}>
-              Home
-            </Link>
-          </li>
-          <li>
-            <Link to="/about" onClick={() => setIsMenuOpen(false)}>
-              About
-            </Link>
-          </li>
-          <li>
-            <Link to="/contact" onClick={() => setIsMenuOpen(false)}>
-              Contact
-            </Link>
-          </li>
-        </ul>
-      </nav>
-    </header>
+    </header >
   );
 }
 
