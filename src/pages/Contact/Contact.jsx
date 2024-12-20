@@ -56,20 +56,6 @@ const ContactPage = () => {
 
   return (
     <div className="contact-page">
-      <div className="map-container">
-        <iframe
-        className='mapIframe'
-          title="Google Map Location"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3563.6970801332263!2d88.37776241105425!3d26.72212267666448!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39e447f129c78e15%3A0x8c7e7a75356b19c!2sExpression%20Facility%20Management%20Services!5e0!3m2!1sen!2sin!4v1734503509668!5m2!1sen!2sin"
-          // width="600"
-          // height="450"
-          style={{ border: 0 }}
-          allowFullScreen=""
-          referrerpolicy="no-referrer-when-downgrade"
-          loading="lazy"
-        ></iframe>
-      </div>
-
       <div className="contact-form">
         <h2>Contact Us</h2>
         <form onSubmit={handleSubmit}>
@@ -108,6 +94,19 @@ const ContactPage = () => {
           <button type="submit">Send Message</button>
         </form>
         {status && <p className="status-message">{status}</p>}
+      </div>
+      <div className="map-container">
+        <iframe
+        className='mapIframe'
+          title="Google Map Location"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3563.6970801332263!2d88.37776241105425!3d26.72212267666448!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39e447f129c78e15%3A0x8c7e7a75356b19c!2sExpression%20Facility%20Management%20Services!5e0!3m2!1sen!2sin!4v1734503509668!5m2!1sen!2sin"
+          // width="600"
+          // height="450"
+          style={{ border: 0 }}
+          allowFullScreen=""
+          referrerpolicy="no-referrer-when-downgrade"
+          loading="lazy"
+        ></iframe>
       </div>
     </div>
   );
