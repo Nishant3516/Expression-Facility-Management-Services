@@ -1,6 +1,5 @@
 import React from "react";
 import "./ClientSection.css";
-import clientLogo1 from "../../assets/expression_logo.jpg";
 import neotiaLogo from "../../assets/clients/neotia_logo.webp";
 import fortuneLogo from "../../assets/clients/fortune_logo_wbg.png";
 import thalamusLogo from "../../assets/clients/thalamus_logo.png";
@@ -8,10 +7,10 @@ import sacredLogo from "../../assets/clients/sacred_logo_wbg.png";
 import kinsLogo from "../../assets/clients/kins_logo.png";
 import fordLogo from "../../assets/clients/ford_logo.png";
 import varshaLogo from "../../assets/clients/varsha_logo.png";
+import clientLogo1 from "../../assets/expression_logo.jpg";
 
 const ClientSection = () => {
     const clients = [
-        clientLogo1,
         neotiaLogo,
         fortuneLogo,
         thalamusLogo,
@@ -19,6 +18,7 @@ const ClientSection = () => {
         kinsLogo,
         fordLogo,
         varshaLogo,
+        clientLogo1,
     ];
 
     return (
