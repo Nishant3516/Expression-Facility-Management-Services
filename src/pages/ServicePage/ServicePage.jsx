@@ -1,22 +1,27 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
-import './ServicePage.css'; // Optional: styles for the service page
-import bgImage from '../../assets/hero_image.jpeg'; // Default image, use real images for each service
+import './ServicePage.css'; 
+import bgImage from '../../assets/hero_image.jpeg';
+import housekeepingImage from '../../assets/services/housekeeping.jpg'
+import lanudryImage from '../../assets/services/laundry.jpg'
+import pestImage from '../../assets/services/pest.jpg'
+import securityImage from '../../assets/services/security.jpg'
+import wardboyImage from '../../assets/services/wardboy.jpg'
+
 
 const ServicePage = () => {
-  const { serviceId } = useParams(); // Extract serviceId from URL
+  const { serviceId } = useParams(); 
 
-  // Simulate service data (you can replace this with an API call or dynamic data)
   const serviceData = [
-    { id: 1, title: 'Housekeeping Services', description: 'Detailed description for Housekeeping Service', backgroundImage: bgImage },
-    { id: 2, title: 'Security Services', description: 'Detailed description for Security Service', backgroundImage: bgImage },
-    { id: 3, title: 'Pest Control Services', description: 'Detailed description for Pest Control Service', backgroundImage: bgImage },
-    { id: 4, title: 'Linen & Laundry Services', description: 'Detailed description for Linen & Laundry Service', backgroundImage: bgImage },
-    { id: 5, title: 'Bio Medical Waste', description: 'Detailed description for Bio Medical Waste Service', backgroundImage: bgImage },
-    { id: 6, title: 'Ward Boy Services', description: 'Detailed description for Ward Boy Service', backgroundImage: bgImage },
+    { id: 1, title: 'Housekeeping Services', description: 'Description for Service 1', backgroundImage: housekeepingImage},
+    { id: 2, title: 'Security Services', description: 'Description for Service 2', backgroundImage: securityImage },
+    { id: 3, title: 'Pest Control Services', description: 'Description for Service 3', backgroundImage: pestImage },
+    { id: 4, title: 'Linen & Laundry Services', description: 'Description for Service 4', backgroundImage: lanudryImage },
+    { id: 5, title: 'Bio Medical Waste', description: 'Description for Service 5', backgroundImage: bgImage },
+    { id: 6, title: 'Ward Boy Services', description: 'Description for Service 6', backgroundImage: wardboyImage },
   ];
 
-  const service = serviceData.find(s => s.id === parseInt(serviceId)); // Find the selected service by id
+  const service = serviceData.find(s => s.id === parseInt(serviceId)); 
 
   if (!service) {
     return <p>Service not found</p>;

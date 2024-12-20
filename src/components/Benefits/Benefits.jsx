@@ -61,15 +61,13 @@ const benefitsData = [
 ];
 
 const Benefits = () => {
-  const firstRow = benefitsData.slice(0, 4); 
-  const secondRow = benefitsData.slice(4); 
 
   return (
     <div className="benefits-container">
       <h2 className="benefits-title">Why Choose Us?</h2>
       <div className="benefits-grid">
         <div className="benefits-row">
-          {firstRow.map((benefit) => (
+          {benefitsData.map((benefit) => (
             <div key={benefit.id} className="benefit-card">
               <div className="benefit-icon">
                 <span>{benefit.icon}</span>
@@ -80,7 +78,7 @@ const Benefits = () => {
           ))}
         </div>
         
-        <div className="benefits-row">
+        {/* <div className="benefits-row">
           {secondRow.map((benefit) => (
             <div key={benefit.id} className="benefit-card">
               <div className="benefit-icon">
@@ -88,9 +86,9 @@ const Benefits = () => {
               </div>
               <h3 className="benefit-title">{benefit.title}</h3>
               {/* <p className="benefit-description">{benefit.description}</p> */}
-            </div>
+            {/* </div>
           ))}
-        </div>
+        </div> */}
       </div>
     </div>
   );

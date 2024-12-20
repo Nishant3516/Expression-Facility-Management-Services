@@ -24,6 +24,8 @@
 .benefits-row {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+    justify-content: center;
+    align-items: center;
     gap: 20px;
 }
 
@@ -35,8 +37,6 @@
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    width: 250px;
-    max-width: 250px;
     height: 250px;
     display: flex;
     flex-direction: column;
@@ -68,8 +68,4 @@
         grid-template-columns: repeat(1, 1fr);
     }
 
-    .benefit-card {
-        width: 100%;
-        max-width: 100%;
-    }
 }

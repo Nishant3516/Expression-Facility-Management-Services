@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import SectorCard from './SectorCard'; // Assuming Service is in the same folder as Services.js
 import './SectorSection.css'; // The styles for Services component
 import tempIcon from '../../assets/hero_image.jpeg'; // You can change this to specific service images
@@ -31,13 +30,11 @@ const SectorSection = () => {
       <h1 style={{ textAlign: 'center', marginBottom: "30px" }}>Our Sectors</h1>
       <div className="services-grid">
         {topServiceData.map((service) => (
-          <Link to={`/service/${service.id}`} style={{textDecoration:'none', color:'black'}} key={service.id} className="service-link">
             <SectorCard
               title={service.title}
               description={service.description}
               backgroundImage={service.backgroundImage}
             />
-          </Link>
         ))}
       </div>
     </div>

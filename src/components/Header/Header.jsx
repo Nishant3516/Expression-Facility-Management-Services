@@ -35,7 +35,6 @@ function Header() {
 
     <header className="header">
       <div className="mainHeaderDiv">
-        {/* Logo always visible on the left */}
         <div className="logo">
           <img src={logo} alt="Logo" />
         </div>
