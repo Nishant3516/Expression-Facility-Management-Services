@@ -5,7 +5,6 @@ import logo from "../../assets/expression_without_bg_logo.png";
 const Footer = () => {
     return (
         <footer className="footer-container">
-            {/* Column 1: Logo and Description */}
             <div className="footerMainContainer">
             <div className="footer-column">
                 <img src={logo} alt="Company Logo" className="footer-logo" />

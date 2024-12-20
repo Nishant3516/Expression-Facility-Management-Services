@@ -1,19 +1,27 @@
+/* Base container styles */
 .container {
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: #1e90ff;
     color: white;
-    padding: 30px 20px;
     font-family: Arial, sans-serif;
     margin-bottom: 40px;
+    width: 100%;
 }
 
+/* Header content styling */
 .header-content {
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    /* Adjusts spacing for header content */
+    width: 80%;
+    max-width: 1200px;
+    /* Max width for larger screens */
 }
 
+/* Image styling */
 .header-content img {
     height: 15vh;
     width: 20vw;
@@ -21,26 +29,102 @@
     border-radius: 50px 50px 50px 50px;
 }
 
+/* Heading styling */
 .header-content h1 {
     margin-right: 60px;
+    font-size: 2rem;
+    /* Adjust font size for h1 */
 }
 
+/* Stats container styling */
 .stats-container {
     display: flex;
     gap: 40px;
 }
 
+/* Stat item styling */
 .stat {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
+/* Stat value styling */
 .stat-value {
     font-size: 36px;
     font-weight: bold;
 }
 
+/* Stat label styling */
 .stat-label {
     font-size: 16px;
+}
+
+/* Mobile view */
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        /* Center-aligns text for mobile */
+    }
+
+    .header-content img {
+        height: 20vh;
+        /* Adjust image size */
+        width: 25vw;
+        /* Adjust width for smaller screens */
+        margin-bottom: 20px;
+    }
+
+    .header-content h1 {
+        font-size: 1.5rem;
+        /* Smaller font size for h1 */
+        margin-right: 0;
+        margin-bottom: 20px;
+        /* Adds margin at the bottom */
+    }
+
+    .stats-container {
+        flex-direction: column;
+        /* Stack stats vertically on small screens */
+        gap: 20px;
+        /* Adjust gap between stats */
+    }
+
+    .stat {
+        flex-direction: row;
+        /* Align stat value and label horizontally */
+        justify-content: center;
+    }
+
+    .stat-value {
+        font-size: 28px;
+        /* Slightly smaller stat value for mobile */
+    }
+
+    .stat-label {
+        font-size: 14px;
+        /* Smaller label font for mobile */
+    }
+}
+
+/* Tablet view */
+@media (max-width: 1024px) {
+    .header-content h1 {
+        font-size: 1.75rem;
+        /* Slightly larger font size for tablets */
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .stats-container {
+        gap: 30px;
+        /* Slightly reduce gap for tablet */
+    }
+
+    .stat-value {
+        font-size: 32px;
+        /* Slightly larger font size for tablets */
+    }
 }
