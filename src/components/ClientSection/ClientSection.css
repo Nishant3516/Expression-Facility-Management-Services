@@ -1,17 +1,10 @@
 .client-section {
     padding: 40px 20px;
     text-align: center;
-    background-color: #f9f9f9;
+    background-color: white;
     color: #333;
     width: 80%;
     margin: auto;
-}
-
-.client-section h2 {
-    margin-bottom: 20px;
-    font-size: 24px;
-    font-weight: bold;
-    color: #444;
 }
 
 .client-grid {
@@ -24,7 +17,7 @@
 
 .client-logo img {
     max-width: 80%;
-    max-height: 80%;
+    max-height: 60%;
     object-fit: contain;
     filter: grayscale(100%);
     transition: filter 0.3s ease-in-out;
@@ -34,11 +27,22 @@
     filter: none;
 }
 
+/* Default font size for h1 */
+.client-section h1 {
+    font-size: 2em;
+}
+
 /* Media Query for Tablets */
 @media (max-width: 768px) {
     .client-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 15px;
+    }
+
+    /* Adjust font size for tablets */
+    .client-section h1 {
+        font-size: 36px;
+        /* Adjust font size for medium screens */
     }
 }
 
@@ -46,7 +50,12 @@
 @media (max-width: 480px) {
     .client-grid {
         grid-template-columns: repeat(2, 1fr);
+    }
 
+    /* Adjust font size for smaller screens (mobiles) */
+    .client-section h1 {
+        font-size: 28px;
+        /* Smaller font size for small mobile screens */
     }
 
     .client-logo img {

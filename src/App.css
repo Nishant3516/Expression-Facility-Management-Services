@@ -6,6 +6,10 @@
   padding: 0;
 }
 
+h1 {
+  color: #4F5E73;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;

@@ -61,10 +61,12 @@ const benefitsData = [
 ];
 
 const Benefits = () => {
-
   return (
     <div className="benefits-container">
-      <h2 className="benefits-title">Why Choose Us?</h2>
+
+  
+    <div className="benefits-main-container">
+      <h1 className="benefits-title">Why Choose Us?</h1>
       <div className="benefits-grid">
         <div className="benefits-row">
           {benefitsData.map((benefit) => (
@@ -77,7 +79,7 @@ const Benefits = () => {
             </div>
           ))}
         </div>
-        
+        </div>
         {/* <div className="benefits-row">
           {secondRow.map((benefit) => (
             <div key={benefit.id} className="benefit-card">

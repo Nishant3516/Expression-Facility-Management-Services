@@ -1,14 +1,11 @@
 import React from "react";
 import "./About.css";
-import heroImage from "../../assets/hero_image.jpeg"; 
-import serviceIcon1 from "../../assets/hero_image.jpeg";
-import serviceIcon2 from "../../assets/hero_image.jpeg";
-import serviceIcon3 from "../../assets/hero_image.jpeg";
-import teamPhoto1 from "../../assets/hero_image.jpeg"; 
-import teamPhoto2 from "../../assets/hero_image.jpeg";
-import teamPhoto3 from "../../assets/hero_image.jpeg";
-import clientLogo1 from "../../assets/hero_image.jpeg";
-import clientLogo2 from "../../assets/hero_image.jpeg";
+import heroImage from "../../assets/hero_image.jpg";
+import teamPhoto1 from "../../assets/hero_image.jpg"; 
+import teamPhoto2 from "../../assets/hero_image.jpg";
+import teamPhoto3 from "../../assets/hero_image.jpg";
+import clientLogo1 from "../../assets/hero_image.jpg";
+import clientLogo2 from "../../assets/hero_image.jpg";
 import { Link } from "react-router-dom";
 
 function AboutUs() {
@@ -40,40 +37,6 @@ function AboutUs() {
           of facility management.
         </p>
       </section>
-
-      {/* <section className="services-overview">
-        <h2>Our Services</h2>
-        <div className="services-grid">
-          <div className="service-card">
-            <img src={serviceIcon1} alt="Housekeeping Services" />
-            <h3>Housekeeping</h3>
-            <p>
-              Our professional housekeeping services ensure a clean, hygienic, and welcoming environment, 
-              tailored to your specific needs.
-            </p>
-          </div>
-          <div className="service-card">
-            <img src={serviceIcon2} alt="Security Services" />
-            <h3>Security</h3>
-            <p>
-              We provide trained security personnel and cutting-edge technology to safeguard your premises 
-              and assets 24/7.
-            </p>
-          </div>
-          <div className="service-card">
-            <img src={serviceIcon3} alt="Pest Control" />
-            <h3>Pest Control</h3>
-            <p>
-              Our eco-friendly pest control solutions eliminate infestations while maintaining safety for people 
-              and the environment.
-            </p>
-          </div>
-        </div>
-        <p className="services-more">
-          Additional services include linen management, biomedical waste handling, and ward boy staffing, 
-          ensuring comprehensive solutions for all your facility needs.
-        </p>
-      </section> */}
 
       <section className="why-choose-us">
         <h2>Why Choose Us</h2>

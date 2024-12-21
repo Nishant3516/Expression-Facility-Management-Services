@@ -1,7 +1,7 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
 import './ServicePage.css'; 
-import bgImage from '../../assets/hero_image.jpeg';
+import bgImage from '../../assets/hero_image.jpg';
 import housekeepingImage from '../../assets/services/housekeeping.jpg'
 import lanudryImage from '../../assets/services/laundry.jpg'
 import pestImage from '../../assets/services/pest.jpg'

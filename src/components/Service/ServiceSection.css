@@ -1,35 +1,34 @@
 .sectors-section {
-    padding: 50px 20px;
-    background-color: #f8f9fa;
+    background-color: white;
+    padding: 2rem 1.25rem;
     text-align: center;
     width: 80%;
     margin: auto;
 }
 
 .sectors-title {
-    font-size: 2.5rem;
-    font-weight: bold;
-    margin-bottom: 30px;
-    color: #333;
+    margin-bottom: 2rem;
+    font-size: 2em;
+    color: #2C2A52;
 }
+
 
 /* Top row grid styling */
 .top-sectors-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    /* 4 items in the top row */
-    gap: 20px;
+    gap: 1.25rem;
+    /* 20px */
     justify-items: center;
-    margin-bottom: 20px;
-    /* Space between top and bottom rows */
+    margin-bottom: 1.25rem;
+    /* 20px */
 }
 
 /* Bottom row grid styling */
 .bottom-sectors-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    /* Ensure it has 4 columns */
-    gap: 0px;
+    gap: 0;
     justify-items: center;
 }
 
@@ -37,28 +36,36 @@
 .sector-card {
     background-color: #fff;
     border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 20px;
+    border-radius: 0.5rem;
+    /* 8px */
+    padding: 1.25rem;
+    /* 20px */
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    width: 250px;
-    /* Specific width for each card */
-    max-width: 250px;
-    /* Ensure the card does not exceed 250px */
+    box-shadow: 0 0.125rem 0.3125rem rgba(0, 0, 0, 0.1);
+    /* 2px 5px */
+    width: 15.625rem;
+    /* 250px */
+    max-width: 15.625rem;
+    /* 250px */
 }
 
 /* Hover effect */
 .sector-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transform: translateY(-0.3125rem);
+    /* -5px */
+    box-shadow: 0 0.25rem 0.625rem rgba(0, 0, 0, 0.2);
+    /* 4px 10px */
 }
 
 /* Sector icon styling */
 .sector-icon {
-    width: 100px;
-    height: 100px;
-    margin-bottom: 5px;
+    width: 6.25rem;
+    /* 100px */
+    height: 6.25rem;
+    /* 100px */
+    margin-bottom: 0.3125rem;
+    /* 5px */
 }
 
 /* Sector name */
@@ -70,25 +77,48 @@
 
 /* Responsive behavior */
 @media (max-width: 768px) {
+
+    /* Adjust icon size for smaller screens */
     .sector-icon {
-        width: 60px;
-        height: 60px;
+        width: 3.75rem;
+        /* 60px */
+        height: 3.75rem;
+        /* 60px */
     }
 
+    /* Adjust sector name font size */
     .sector-name {
         font-size: 1rem;
     }
 
     /* Adjust width of the cards for smaller screens */
     .sector-card {
-        width: 200px;
-        max-width: 200px;
+        width: 12.5rem;
+        /* 200px */
+        max-width: 12.5rem;
+        /* 200px */
     }
 
     /* Adjust the grid layout for smaller screens */
     .top-sectors-grid,
     .bottom-sectors-grid {
         grid-template-columns: repeat(1, 1fr);
-        /* 2 items per row for small screens */
+        /* 1 item per row for small screens */
+    }
+
+    /* Adjust font size for h1 under sectors-title */
+    .sectors-title h1 {
+        font-size: 2em;
+        /* Adjust font size for tablets */
+    }
+}
+
+/* Media Query for Mobile */
+@media (max-width: 480px) {
+
+    /* Adjust font size for h1 under sectors-title for mobile */
+    .sectors-title h1 {
+        font-size: 1.5em;
+        /* Adjust font size for mobile screens */
     }
 }

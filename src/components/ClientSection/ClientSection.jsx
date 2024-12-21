@@ -23,7 +23,7 @@ const ClientSection = () => {
 
     return (
         <section className="client-section">
-            <h2>Our Clients</h2>
+            <h1 style={{ textAlign: "center", marginBottom: "30px" }}>Our Clients</h1>
             <div className="client-grid">
                 {clients.map((logo, index) => (
                     <div className="client-logo" key={index}>

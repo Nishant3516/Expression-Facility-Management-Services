@@ -3,8 +3,7 @@ import './SectorCard.css';
 
 const SectorCard = ({ title, description, backgroundImage }) => {
     return (
-
-        <div className="service-card">
+        <div className="service-card" >
             <div style={{
                 backgroundImage: `url(${backgroundImage})`,
                 backgroundSize: 'cover',
@@ -13,12 +12,12 @@ const SectorCard = ({ title, description, backgroundImage }) => {
                 height: '100%',
                 backgroundRepeat: 'no-repeat'
             }}>
-                <div className="service-overlay"></div>
-                <div className="service-content">
+                {/* <div className="service-overlay"></div> */}
+                {/* <div className="service-content">
                     <p className="service-description">{description}</p>
-                </div>
+                </div> */}
             </div>
-            <h3 className="service-title">{title}</h3>
+            {/* <h3 className="service-title">{title}</h3> */}
         </div>
     );
 };
