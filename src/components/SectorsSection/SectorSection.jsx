@@ -39,7 +39,7 @@ const SectorSection = () => {
   return (
     <div className="services-container">
     <div className="services-main-container">
-      <h1 style={{ textAlign: "center", marginBottom: "2rem" }}>Our Sectors</h1>
+      <h1 style={{ textAlign: "center", marginBottom: "2rem" , color:"white"}}>Sectors We Serve</h1>
       <div
         className="services-row"
         style={{

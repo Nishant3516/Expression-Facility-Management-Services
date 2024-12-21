@@ -1,18 +1,15 @@
 import React from 'react';
 import './ServiceCard.css';
 
-const ServiceCard = ({ title, description, name, icon, backgroundImage }) => {
-  console.log(backgroundImage);
+const ServiceCard = ({ title, backgroundImage }) => {
   return (
-    <div className="card" >
+    <div className="card">
       <div className="image">
-        <img src={backgroundImage} alt="" srcset="" />
-        {/* <span className="text">{title}</span> */}
+        <img src={backgroundImage} alt={title} />
       </div>
       <span className="title">{title}</span>
-      {/* <span className="price">$100</span> */}
     </div>
   );
-}
+};
 
 export default ServiceCard;

@@ -6,7 +6,6 @@ const Footer = () => {
     return (
         <footer className="footer-container">
             <div className="footerMainContainer">
-                {/* Column 1: Logo and Description */}
                 <div className="footer-column">
                     <div className="logo-circle">
                         <img src={logo} alt="Company Logo" className="footer-logo" />
@@ -17,7 +16,6 @@ const Footer = () => {
                     </p>
                 </div>
 
-                {/* Column 2: Navigation Links */}
                 <div className="footer-column">
                     <h4>Quick Links</h4>
                     <ul>
@@ -28,7 +26,6 @@ const Footer = () => {
                     </ul>
                 </div>
 
-                {/* Column 3: Contact Details */}
                 <div className="footer-column">
                     <h3>Contacts</h3>
                     <p>Address: Siliguri, West Bengal</p>

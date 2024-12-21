@@ -2,102 +2,86 @@
     position: relative;
     width: 22em;
     height: 16.5em;
-    box-shadow: 0px 1px 13px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 1px 13px rgba(0, 0, 0, 0.2);
     cursor: pointer;
-    transition: all 120ms;
+    transition: all 120ms ease-in-out;
     display: flex;
+    flex-direction: column;
+    /* Changed to column layout */
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     background: #fff;
     padding: 0.5em;
-    padding-bottom: 3.4em;
+    padding-bottom: 0.5em;
+    /* Adjusted for better spacing */
     overflow: hidden;
 }
 
-.card::after {
-    content: "Learn more";
-    padding-top: 1.25em;
-    padding-left: 1.25em;
+/* Black Overlay */
+.image::before {
+    content: "";
     position: absolute;
+    top: 0;
     left: 0;
-    bottom: -60px;
-    background: #2C2A52;
-    color: #fff;
-    height: 2.5em;
     width: 100%;
-    transition: all 80ms;
-    font-weight: 600;
-    text-transform: uppercase;
-    opacity: 0;
+    height: 100%;
+    background: rgba(0, 0, 0, 0);
+    /* Initially transparent */
+    transition: background 0.3s ease-in-out;
+    z-index: 2;
 }
 
+.card:hover .image::before {
+    background: rgba(0, 0, 0, 0.3);
+}
+
+/* Title */
 .card .title {
     text-align: center;
-    justify-content: center;
-    align-self: center;
-    align-items: center;
     font-size: 1.2em;
     font-weight: bold;
-    position: absolute;
-    /* left: 0.625em; */
-    bottom: 1em;
     color: #4682B4;
+    z-index: 3;
+    margin-top: 0.6em;
+    /* Adjusted margin to push the title down */
+    transition: opacity 200ms ease-in-out;
 }
 
-.card .price {
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-size: 0.9em;
+/* Learn More Button */
+.card::after {
+    content: "Learn more";
     position: absolute;
-    left: 0.625em;
-    bottom: 0.625em;
-    color: #000;
+    left: 0;
+    bottom: -100px;
+    background: #2C2A52;
+    color: #fff;
+    height: 3.5em;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: bottom 200ms ease-in-out;
+    z-index: 4;
 }
 
 .card:hover::after {
     bottom: 0;
-    opacity: 1;
-}
-
-.card:active {
-    transform: scale(0.98);
-}
-
-.text {
-    position: absolute;
-    bottom: 1.5em;
-    /* Adjust this value to position the text */
-    left: 50%;
-    transform: translateX(-50%);
-    color: #fff;
-    font-size: 1.2em;
-    font-weight: bold;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
-    /* Make sure the text is readable on different backgrounds */
 }
 
 .image {
     width: 100%;
-    /* Takes up the full width of the .card */
-    height: 100%;
-    /* Takes up the full height of the .card */
+    height: 80%;
     position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .image img {
     width: 100%;
-    /* Makes sure the image takes the full width of the container */
     height: 100%;
-    /* Makes sure the image takes the full height of the container */
     object-fit: cover;
-    /* Ensures the image covers the entire container without stretching */
 }
 
-/* Media Queries */
-
-/* Tablets (max-width: 768px) */
 @media (max-width: 768px) {
     .card {
         width: 18em;
@@ -105,16 +89,11 @@
     }
 
     .card .title {
-        font-size: 0.8em;
-    }
-
-    .card .price {
-        font-size: 0.8em;
+        font-size: 1em;
     }
 
     .card::after {
-        font-size: 0.8em;
-        height: 2.2em;
+        font-size: 0.9em;
     }
 }
 
@@ -123,21 +102,14 @@
     .card {
         width: 90%;
         height: 12em;
-        padding-bottom: 2.5em;
     }
 
-    .card .title,
-    .card .price {
-        font-size: 0.7em;
+    .card .title {
+        font-size: 0.8em;
     }
 
     .card::after {
-        font-size: 0.7em;
+        font-size: 0.8em;
         height: 2em;
-        width: 100%;
-    }
-
-    .text {
-        max-width: 45px;
     }
 }
