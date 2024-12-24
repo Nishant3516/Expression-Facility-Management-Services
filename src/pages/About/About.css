@@ -1,5 +1,4 @@
 .about-us {
-    font-family: "Arial", sans-serif;
     line-height: 1.8;
     color: #333;
 }
@@ -7,6 +6,17 @@
 .hero-banner {
     color: white;
     background: linear-gradient(to bottom right, #007bff, #0056b3);
+}
+
+.heroImageDiv {
+    height: 70%;
+    width: 100%;
+}
+
+.heroImageDiv img {
+    width: 100%;
+    height: 70%;
+    object-fit: cover;
 }
 
 .heroDiv {
@@ -79,17 +89,6 @@ h2 {
     max-width: 1200px;
 }
 
-/* Achievements */
-.achievements {
-    padding: 40px 20px;
-    background-color: #f8f9fa;
-}
-
-.client-logos img {
-    width: 100px;
-    margin: 10px;
-}
-
 /* Call to Action */
 .call-to-action {
     padding: 50px 20px;
@@ -114,11 +113,60 @@ h2 {
     color: white;
 }
 
+
+.about-us-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.about-us-content h2 {
+    font-size: 36px;
+    color: #2a5d84;
+    margin-bottom: 40px;
+}
+
+.values-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+    justify-items: center;
+}
+
+.value-item {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 20px 15px rgba(44, 33, 76, 0.3);
+    padding: 30px;
+    max-width: 350px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.value-item:hover {
+    transform: translateY(-10px);
+}
+
+.value-icon {
+    font-size: 40px;
+    color: #2a5d84;
+    margin-bottom: 20px;
+}
+
+.value-item h3 {
+    font-size: 24px;
+    color: #282c34;
+}
+
 /* For tablets and smaller desktops */
 @media (max-width: 1024px) {
     .heroDiv {
         flex-direction: column;
         padding: 40px 20px;
+    }
+
+    .values-list {
+        grid-template-columns: 1fr 1fr;
     }
 
     .hero-image {
@@ -151,6 +199,22 @@ h2 {
 @media (max-width: 768px) {
     .heroDiv {
         width: 90%;
+    }
+
+    .values-list {
+        grid-template-columns: 1fr;
+    }
+
+    .about-us-content h2 {
+        font-size: 28px;
+    }
+
+    .value-item {
+        padding: 20px;
+    }
+
+    .value-item h3 {
+        font-size: 20px;
     }
 
     .company-overview,

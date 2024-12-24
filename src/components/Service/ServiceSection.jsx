@@ -3,11 +3,13 @@ import './ServiceSection.css';
 import { Link } from 'react-router-dom';
 import ServiceCard from './ServiceCard'; 
 import biomedicalImage from '../../assets/services/biomedical.jpg';
-import housekeepingImage from '../../assets/services/housekeeping.jpg'
+// import housekeepingImage from '../../assets/services/housekeeping.jpg'
+import housekeepingImage from '../../assets/services/temp_housekeeping_services.jpg'
 import lanudryImage from '../../assets/services/laundry.jpg'
 import pestImage from '../../assets/services/pest.jpg'
 import securityImage from '../../assets/services/security.jpg'
-import wardboyImage from '../../assets/services/wardboy.jpg'
+import wardboyImage from '../../assets/services/temp_ward_boy.jpg'
+// import wardboyImage from '../../assets/services/wardboy.jpg'
 
 
 const servicesData = [
