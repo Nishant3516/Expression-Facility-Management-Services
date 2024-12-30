@@ -1,5 +1,5 @@
 .service-page-container {
-    padding: 20px;
+    padding-bottom: 20px;
     text-align: center;
 }
 
@@ -19,7 +19,7 @@
     font-size: 1.2rem;
     color: #555;
     max-width: 800px;
-    margin: 0 auto;
+    margin: auto;
 }
 
 .service-page-content p {
@@ -28,7 +28,7 @@
 
 .about-us-content {
     max-width: 1200px;
-    margin: 0 auto;
+    margin: 30px auto;
     text-align: center;
 }
 
@@ -40,9 +40,13 @@
 
 .values-list {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(3, minmax(300px, 1fr));
+    /* Distribute space equally */
     gap: 30px;
-    justify-items: center;
+    justify-items: stretch;
+    justify-content: center;
+    /* Ensures items stretch to equal width */
+    margin: 0 auto;
 }
 
 .value-item {
@@ -50,9 +54,11 @@
     border-radius: 10px;
     box-shadow: 0 20px 15px rgba(44, 33, 76, 0.3);
     padding: 30px;
-    max-width: 350px;
     text-align: center;
     transition: transform 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .value-item:hover {
