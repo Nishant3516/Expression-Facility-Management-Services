@@ -32,7 +32,7 @@ const Footer = () => {
                     <h4>Email-Us</h4>
                     <p>Email: info@expressionfacility.com</p>
                     <h4>Call Now</h4>
-                    <p>Phone: +91 12345 67890</p>
+                    <p>Phone: +91 96350 67373</p>
                 </div>
             </div>
         </footer>

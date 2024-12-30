@@ -1,6 +1,6 @@
 import React from "react";
 import "./About.css";
-import heroImage from "../../assets/hero_image.jpg";
+import aboutImage from "../../assets/about_hero_image.jpg";
 import QualityStandard from "../../components/QualityStandard/QualityStandard";
 import WhyChooseUs from "../../components/WhyChooseUs/WhyChooseUs";
 import TeamSection from "../../components/TeamSection/TeamSection";
@@ -10,11 +10,9 @@ function AboutUs() {
     <div className="about-us">
       <section className="hero-banner">
     <div className="heroImageDiv">
-      <img src={heroImage} alt="" srcset=""/>
+      <img src={aboutImage} alt="" srcset=""/>
     </div>
-      
       </section>
-
       <section className="company-overview">
         <h2>Who We Are</h2>
         <p>

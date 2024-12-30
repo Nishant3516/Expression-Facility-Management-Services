@@ -7,7 +7,8 @@ import sacredLogo from "../../assets/clients/sacred_logo_wbg.png";
 import kinsLogo from "../../assets/clients/kins_logo.png";
 import fordLogo from "../../assets/clients/ford_logo.png";
 import varshaLogo from "../../assets/clients/varsha_logo.png";
-import clientLogo1 from "../../assets/expression_logo.jpg";
+import pamLogo from "../../assets/clients/pam_logo.jpg" 
+import mayoorLogo from "../../assets/clients/mayoor_logo.png" 
 
 const ClientSection = () => {
     const clients = [
@@ -18,7 +19,8 @@ const ClientSection = () => {
         kinsLogo,
         fordLogo,
         varshaLogo,
-        clientLogo1,
+        pamLogo,
+        mayoorLogo,
     ];
 
     return (

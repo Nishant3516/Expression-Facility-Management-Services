@@ -1,4 +1,3 @@
-/* Style for the individual service page */
 .service-page-container {
     padding: 20px;
     text-align: center;
@@ -11,7 +10,7 @@
 
 .service-page-image {
     width: 100%;
-    height: 300px;
+    height: 100%;
     background-color: #f1f1f1;
     margin-bottom: 20px;
 }
@@ -25,4 +24,48 @@
 
 .service-page-content p {
     line-height: 1.6;
+}
+
+.about-us-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.about-us-content h2 {
+    font-size: 36px;
+    color: #2a5d84;
+    margin-bottom: 40px;
+}
+
+.values-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+    justify-items: center;
+}
+
+.value-item {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 20px 15px rgba(44, 33, 76, 0.3);
+    padding: 30px;
+    max-width: 350px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.value-item:hover {
+    transform: translateY(-10px);
+}
+
+.value-icon {
+    font-size: 40px;
+    color: #2a5d84;
+    margin-bottom: 20px;
+}
+
+.value-item h3 {
+    font-size: 24px;
+    color: #282c34;
 }

@@ -10,8 +10,8 @@ import resortImage from "../../assets/sectors/resort.jpg";
 import shopImage from "../../assets/sectors/shop.jpg";
 import shoppingImage from "../../assets/sectors/shopping.jpg";
 
-const SectorSection = () => {
-  const topServiceData = [
+const SectorSection = (props) => {
+  const topServiceData = props.list ?? [
     { title: "Healthcare", icon: healthImage },
     { title: "Hotels & Restaurants", icon: hotelImage },
     { title: "Resorts", icon: resortImage },

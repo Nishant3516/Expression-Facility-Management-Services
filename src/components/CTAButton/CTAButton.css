@@ -1,0 +1,40 @@
+.cta-container {
+    text-align: center;
+    width: 50%;
+    margin: auto;
+    margin-top: 20px;
+}
+
+.cta-button {
+    padding: 20px 30px;
+    font-size: 16px;
+    background-color: #007BFF;
+    width: 50%;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    position: relative;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #0056b3;
+}
+
+.cta-icon i {
+    font-size: 18px;
+    transition: transform 0.3s ease, width 0.3s ease;
+    width: 20px;
+    display: inline-block;
+}
+
+.cta-button:hover .cta-icon i {
+    transform: scale(1.2);
+    width: 30px;
+}

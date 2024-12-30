@@ -1,17 +1,17 @@
 .contact-page {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     padding: 20px;
     flex-wrap: wrap;
     width: 80%;
     margin: auto;
+    align-items: center;
 }
 
 .map-container {
     flex: 1;
     margin-right: 20px;
 }
-
 
 .mapIframe {
     width: 600px;
@@ -21,11 +21,16 @@
 .contact-form {
     flex: 1;
     max-width: 500px;
+    text-align: left;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
 }
 
 .contact-form h2 {
     text-align: center;
     margin-bottom: 20px;
+    font-size: 2rem;
 }
 
 .contact-form .form-group {
@@ -36,6 +41,8 @@
     display: block;
     font-size: 1.1rem;
     margin-bottom: 5px;
+    text-align: left;
+    /* Left-align the labels */
 }
 
 .contact-form input,
@@ -43,8 +50,20 @@
     width: 100%;
     padding: 10px;
     font-size: 1rem;
-    border: 1px solid #ddd;
+    border: 1px solid grey;
     border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    /* Shadow for the input fields */
+    transition: box-shadow 0.3s ease-in-out;
+    /* Add a smooth transition for shadow effect */
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    box-shadow: 0 0 8px rgba(0, 150, 255, 0.7);
+    /* Shadow on focus */
+    outline: none;
+    /* Remove default outline */
 }
 
 .contact-form button {
@@ -56,6 +75,8 @@
     border-radius: 4px;
     cursor: pointer;
     width: 100%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* Shadow for the button */
 }
 
 .contact-form button:hover {

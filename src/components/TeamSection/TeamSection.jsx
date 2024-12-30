@@ -1,15 +1,13 @@
 import React from 'react';
-import './TeamSection.css';  // Import the CSS file
-
-// Dummy image import for owner (replace with actual image path)
-import teamPhoto1 from '../../assets/hero_image.jpg'; // Owner's image
+import './TeamSection.css';
+import ownerImage from "../../assets/owner/khusbu__owner.jpg";
 
 const TeamSection = () => {
   return (
     <div className="teamSectionDiv">
     <section className="team-section">
 
-      <h2>Meet Our Team</h2>
+      <h2 style={{color:"white"}}>Meet Our Team</h2>
       <p>
         Our team comprises dedicated professionals with extensive experience across various domains. 
         Each member is committed to driving innovation and delivering excellence.
@@ -21,7 +19,7 @@ const TeamSection = () => {
         {/* Owner Section */}
         <div className="owner-section">
           <div className="owner-image">
-            <img src={teamPhoto1} alt="Khushbu Kumari" />
+            <img src={ownerImage} alt="Khushbu Kumari" />
           </div>
           <div className="owner-info">
             <h3>Khushbu Kumari</h3>
@@ -30,19 +28,18 @@ const TeamSection = () => {
           </div>
         </div>
 
-        {/* Team Members Section (2x2 Grid) */}
         <div className="team-grid">
           <div className="team-member">
             <h3>Shyam Prasad</h3>
-            <p>Branch Head</p>
+            <p>[Branch Head]</p>
           </div>
           <div className="team-member">
             <h3>Kamal Kant Bhagat</h3>
-            <p>Operations Manager</p>
+            <p>[Operations Manager]</p>
           </div>
           <div className="team-member">
             <h3>Mithun Bhagat</h3>
-            <p>Linen Management Specialist</p>
+            <p>[Linen Management Specialist]</p>
           </div>
         </div>
 
