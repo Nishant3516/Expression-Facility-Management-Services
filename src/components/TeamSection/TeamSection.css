@@ -31,10 +31,12 @@
     flex-wrap: wrap;
 }
 
+/* Owner Section */
 .owner-section {
     display: grid;
     flex: 0 0 60%;
     grid-template-columns: 40% 60%;
+    /* Image and text side by side on large screens */
     grid-template-rows: auto;
     justify-content: center;
     text-align: left;
@@ -59,6 +61,13 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
+.owner-info {
+    display: flex;
+    flex-direction: column;
+    /* Ensure vertical stacking of text */
+    justify-content: flex-start;
+}
+
 .owner-info h3 {
     font-size: 26px;
     color: #3f51b5;
@@ -79,12 +88,98 @@
     color: #555;
     line-height: 1;
     font-weight: bold;
-
 }
 
+/* For Tablets and Smaller Screens */
+@media (max-width: 1024px) {
+    .owner-section {
+        flex: 0 0 100%;
+        /* Full width on tablets */
+        text-align: center;
+        margin-bottom: 40px;
+        grid-template-columns: 1fr;
+        /* Stacking the image and text */
+    }
+
+    .owner-image {
+        width: 100%;
+        margin-bottom: 20px;
+        /* Space between image and text */
+    }
+
+    .owner-info {
+        text-align: center;
+        /* Center text for mobile/tablets */
+        padding: 0 20px;
+    }
+
+    .owner-info h3 {
+        font-size: 22px;
+    }
+
+    .owner-info p {
+        font-size: 16px;
+    }
+
+    .ownerMainP {
+        font-size: 16px;
+    }
+}
+
+/* For Mobile Devices */
+@media (max-width: 768px) {
+    .owner-section {
+        flex: 0 0 100%;
+        margin-bottom: 30px;
+        text-align: center;
+        grid-template-columns: 1fr;
+        /* 1 column stack */
+    }
+
+    .owner-image {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .owner-info h3 {
+        font-size: 20px;
+    }
+
+    .owner-info p,
+    .ownerMainP {
+        font-size: 14px;
+    }
+}
+
+/* For Small Mobile Devices */
+@media (max-width: 480px) {
+    .owner-section {
+        flex: 0 0 90%;
+        margin-bottom: 20px;
+        grid-template-columns: 1fr;
+        /* Ensure 1 column stack */
+    }
+
+    .owner-image {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    .owner-info h3 {
+        font-size: 18px;
+    }
+
+    .owner-info p,
+    .ownerMainP {
+        font-size: 12px;
+    }
+}
+
+/* Team Grid */
 .team-grid {
     display: grid;
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    /* Default to 3 columns on large screens */
     gap: 20px;
     width: 100%;
     flex: 1;
@@ -97,6 +192,9 @@
     padding: 15px 25px;
     text-align: center;
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
+    width: 100%;
+    box-sizing: border-box;
+    /* Prevent overflow */
 }
 
 .team-member:hover {
@@ -117,30 +215,60 @@
     font-weight: bold;
 }
 
-@media (max-width: 768px) {
-    .team-section {
-        padding: 40px 10px;
-    }
-
-    .team-layout {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .owner-section {
-        flex: 0 0 100%;
-        text-align: center;
-        margin-bottom: 40px;
-    }
-
+/* Adjust grid layout for tablets and smaller devices */
+@media (max-width: 1024px) {
     .team-grid {
-        grid-template-columns: 1fr;
-        gap: 20px;
-        text-align: center;
+        grid-template-columns: repeat(2, 1fr);
+        /* 2 columns for tablets */
     }
 
     .team-member {
         width: 100%;
+        /* Ensure no overflow */
+    }
+}
+
+/* For Mobile Devices */
+@media (max-width: 768px) {
+    .team-grid {
+        grid-template-columns: 1fr;
+        /* Stack team members in 1 column */
+        gap: 20px;
+    }
+
+    .team-member {
         padding: 20px;
+        width: 100%;
+        /* Prevent overflow */
+    }
+}
+
+/* For Small Mobile Devices */
+@media (max-width: 480px) {
+    .team-grid {
+        grid-template-columns: 1fr;
+        /* Stack team members in 1 column */
+    }
+
+    .team-member {
+        padding: 15px;
+        width: 100%;
+        /* Prevent overflow */
+    }
+
+    .team-member h3 {
+        font-size: 18px;
+    }
+
+    .team-member p {
+        font-size: 14px;
+    }
+}
+
+/* Disable Hover Effect for Smaller Devices */
+@media (max-width: 1024px) {
+    .team-member:hover {
+        transform: none;
+        box-shadow: none;
     }
 }

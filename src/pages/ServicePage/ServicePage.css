@@ -1,3 +1,6 @@
+/* ServicePage.css */
+
+/* General Service Page Styles */
 .service-page-container {
     padding-bottom: 20px;
     text-align: center;
@@ -6,13 +9,19 @@
 .service-page-container h1 {
     font-size: 2.5rem;
     margin-bottom: 20px;
+    color: #2a5d84;
+    /* Slightly modify color for better readability */
 }
 
 .service-page-image {
     width: 100%;
-    height: 100%;
+    height: 80vh;
     background-color: #f1f1f1;
     margin-bottom: 20px;
+    background-size: cover;
+    background-position: center;
+    object-fit: cover;
+    /* Ensure the background image covers the container */
 }
 
 .service-page-content {
@@ -38,14 +47,14 @@
     margin-bottom: 40px;
 }
 
+/* Values List */
 .values-list {
     display: grid;
     grid-template-columns: repeat(3, minmax(300px, 1fr));
-    /* Distribute space equally */
+    /* Default 3 columns */
     gap: 30px;
     justify-items: stretch;
     justify-content: center;
-    /* Ensures items stretch to equal width */
     margin: 0 auto;
 }
 
@@ -74,4 +83,262 @@
 .value-item h3 {
     font-size: 24px;
     color: #282c34;
+}
+
+/* Image Style Adjustments for All Devices */
+.value-item img,
+.service-page-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+/* Tablets and Mobile Breakpoints */
+
+/* For Tablets (Max Width 1024px) */
+@media (max-width: 1024px) {
+    .service-page-container h1 {
+        font-size: 2rem;
+        /* Slightly smaller heading */
+    }
+
+    .service-page-content {
+        font-size: 1.1rem;
+        /* Adjust font size */
+    }
+
+    .values-list {
+        grid-template-columns: repeat(2, 1fr);
+        /* 2 columns on tablets */
+    }
+
+    .value-item {
+        padding: 20px;
+    }
+
+    .value-item h3 {
+        font-size: 20px;
+        /* Smaller text for tablet screens */
+    }
+
+    .value-icon {
+        font-size: 35px;
+        /* Slightly smaller icons */
+    }
+}
+
+/* For Mobile Devices (Max Width 768px) */
+@media (max-width: 768px) {
+    .service-page-container h1 {
+        font-size: 1.8rem;
+        /* Make heading smaller */
+    }
+
+    .service-page-content {
+        font-size: 1rem;
+        /* Adjust font size */
+    }
+
+    .values-list {
+        grid-template-columns: 1fr;
+        /* Single column layout for mobile */
+    }
+
+    .value-item {
+        padding: 15px;
+    }
+
+    .value-item h3 {
+        font-size: 18px;
+        /* Smaller text for mobile screens */
+    }
+
+    .value-icon {
+        font-size: 30px;
+        /* Smaller icons on mobile */
+    }
+
+    /* Service Hero Image */
+    .service-page-image {
+        height: 50vh;
+        /* Reduce height of hero image on mobile */
+        background-position: top;
+        /* Adjust background position */
+    }
+}
+
+/* For Small Mobile Devices (Max Width 480px) */
+@media (max-width: 480px) {
+    .service-page-container h1 {
+        font-size: 1.5rem;
+        /* Further reduce heading size */
+    }
+
+    .service-page-content {
+        font-size: 0.9rem;
+        /* Adjust font size for readability */
+    }
+
+    .values-list {
+        grid-template-columns: 1fr;
+        /* 1 column on small screens */
+    }
+
+    .value-item {
+        padding: 10px;
+    }
+
+    .value-item h3 {
+        font-size: 16px;
+        /* Smaller text */
+    }
+
+    .value-icon {
+        font-size: 28px;
+        /* Smaller icons */
+    }
+
+    /* Adjust Hero Image Height */
+    .service-page-image {
+        height: 40vh;
+        /* Make hero image even smaller on small screens */
+        background-position: top;
+        /* Keep background image at the top */
+    }
+}
+
+/* Sectors Section */
+.sectors-section {
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+}
+
+.sectors-section h2 {
+    font-size: 28px;
+    color: #2a5d84;
+    margin-bottom: 20px;
+}
+
+.sectors-section .sector-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    justify-items: center;
+}
+
+.sectors-section .sector-item {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.sectors-section .sector-item:hover {
+    transform: translateY(-10px);
+}
+
+.sectors-section .sector-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.sectors-section .sector-item h3 {
+    font-size: 18px;
+    color: #333;
+    margin-top: 15px;
+}
+
+.sectors-section .sector-item p {
+    font-size: 14px;
+    color: #777;
+}
+
+/* For Tablets and Mobile */
+@media (max-width: 768px) {
+    .sectors-section .sector-list {
+        grid-template-columns: 1fr 1fr;
+        /* 2 columns on tablets */
+    }
+
+    .sectors-section .sector-item {
+        padding: 15px;
+    }
+
+    .sectors-section .sector-item h3 {
+        font-size: 16px;
+    }
+
+    .sectors-section .sector-item p {
+        font-size: 12px;
+    }
+
+    /* Adjusting Image in Sector Item */
+    .sectors-section .sector-item img {
+        max-width: 90%;
+        height: auto;
+    }
+}
+
+/* For Small Mobile */
+@media (max-width: 480px) {
+    .sectors-section .sector-list {
+        grid-template-columns: 1fr;
+        /* 1 column on small screens */
+    }
+
+    .sectors-section .sector-item {
+        padding: 10px;
+    }
+
+    .sectors-section .sector-item h3 {
+        font-size: 14px;
+    }
+
+    .sectors-section .sector-item p {
+        font-size: 10px;
+    }
+
+    /* Adjusting Image in Sector Item */
+    .sectors-section .sector-item img {
+        max-width: 80%;
+        height: auto;
+    }
+}
+
+/* CTA Button */
+.cta-button {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #2a5d84;
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 40px;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #1f4a68;
+}
+
+/* For Tablets and Mobile */
+@media (max-width: 768px) {
+    .cta-button {
+        padding: 12px 25px;
+        font-size: 16px;
+    }
+}
+
+/* For Small Mobile */
+@media (max-width: 480px) {
+    .cta-button {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
 }

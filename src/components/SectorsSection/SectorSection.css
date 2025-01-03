@@ -1,39 +1,52 @@
 .services-container {
     background-color: #282c34;
     padding-bottom: 40px;
+    overflow: hidden;
+    /* Prevent horizontal scrollbars */
 }
 
 .services-main-container {
     width: 80%;
     margin: auto;
     text-align: center;
-    overflow: hidden;
     padding-top: 2rem;
 }
 
+/* Row Styling */
 .services-row {
     padding-top: 1rem;
     display: flex;
-    transition: transform 0.5s ease-in-out;
-    will-change: transform;
     gap: 15px;
+    justify-content: center;
+    /* Remove wrapping */
+    width: fit-content;
+    /* Ensures the row only takes up the width of the items */
 }
 
+/* Default: 4 items per row on large screens */
 .services-row>* {
     flex: 0 0 calc(100% / 4);
     box-sizing: border-box;
+    margin-bottom: 20px;
 }
 
-@media (max-width: 768px) {
+/* Tablet (portrait and landscape) - 3 items per row */
+@media (max-width: 1024px) {
     .services-row>* {
-        flex: 0 0 calc(100% / 2);
-        /* Adjust width for 2 items visible on smaller screens */
+        flex: 0 0 calc(100% / 3);
     }
 }
 
+/* Smaller Tablets and Devices (max-width: 768px) - 2 items per row */
+@media (max-width: 768px) {
+    .services-row>* {
+        flex: 0 0 calc(100% / 2);
+    }
+}
+
+/* Mobile Devices (max-width: 480px) - 1 item per row */
 @media (max-width: 480px) {
     .services-row>* {
         flex: 0 0 100%;
-        /* 1 item visible at a time on mobile */
     }
 }
