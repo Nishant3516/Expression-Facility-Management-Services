@@ -167,7 +167,6 @@ const ServicePage = () => {
           backgroundImage: `url(${service.backgroundImage})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
-          height: "80vh",
         }}
       ></div>
       <div className="service-page-content">

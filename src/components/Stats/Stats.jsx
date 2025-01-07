@@ -13,7 +13,7 @@ const MedicalAchievementHealthProtection = () => {
         <div className="stats-container">
           <div className="stat">
             <span className="stat-value">15+</span>
-            <span className="stat-label">Satisfied Clients</span>
+            <span className="stat-label">Clients</span>
           </div>
           <div className="stat">
             <span className="stat-value">90%</span>

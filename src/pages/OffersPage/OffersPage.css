@@ -11,36 +11,40 @@
     font-weight: bold;
 }
 
-/* Zig-Zag Layout */
+/* Zig-Zag Layout (Alternating Text-Image and Image-Text) */
 .offers-zigzag {
     display: flex;
-    flex-direction: column;
-    gap: 40px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 10px;
     width: 80%;
     margin: auto;
 }
 
 .offer-item {
     display: flex;
-    flex-wrap: wrap;
     align-items: center;
+    width: 48%;
+    /* Two items per row with some gap */
+    flex-direction: row;
+    /* Default is image-text */
     gap: 20px;
-}
-
-.offer-item.reverse {
-    flex-direction: row-reverse;
+    margin-bottom: 40px;
+    /* Space between items */
 }
 
 .offer-image {
-    flex: 1;
-    height: 450px;
+    width: 50%;
+    /* Adjust image to take half of the space */
+    height: 300px;
     background-size: cover;
     background-position: center;
     border-radius: 10px;
 }
 
 .offer-content {
-    flex: 1;
+    width: 50%;
+    /* Text takes the other half */
     text-align: left;
 }
 
@@ -54,4 +58,105 @@
     font-size: 1.1rem;
     line-height: 1.6;
     color: #333333;
+}
+
+/* Media Queries for Responsiveness */
+
+/* Small Screens (Mobile) */
+@media (max-width: 767px) {
+    .offers-page h2 {
+        font-size: 2rem;
+    }
+
+    .offers-zigzag {
+        width: 90%;
+    }
+
+    .offer-item {
+        flex-direction: column;
+        /* Stack text above image */
+        width: 100%;
+        /* Take full width */
+        align-items: center;
+        /* Center items */
+    }
+
+    .offer-image {
+        width: 100%;
+        /* Full width for the image */
+        height: 250px;
+        /* Reduced height for mobile */
+    }
+
+    .offer-content {
+        width: 100%;
+        /* Take full width */
+        text-align: center;
+        /* Center the text */
+    }
+
+    .offer-content h3 {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+    }
+
+    .offer-content p {
+        font-size: 1rem;
+        margin-bottom: 20px;
+    }
+}
+
+/* Medium Screens (Tablets) */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .offers-page h2 {
+        font-size: 2.2rem;
+    }
+
+    .offers-zigzag {
+        width: 85%;
+    }
+
+    .offer-item {
+        flex-direction: row;
+        /* Keep image-text or text-image in a row */
+        width: 48%;
+        /* Two items per row */
+    }
+
+    .offer-image {
+        height: 350px;
+        /* Adjust height for tablets */
+    }
+
+    .offer-content h3 {
+        font-size: 1.6rem;
+    }
+
+    .offer-content p {
+        font-size: 1.05rem;
+    }
+}
+
+/* Large Screens (Desktop and above) */
+@media (min-width: 1025px) {
+    .offers-page h2 {
+        font-size: 2.5rem;
+    }
+
+    .offers-zigzag {
+        width: 80%;
+    }
+
+    .offer-image {
+        height: 400px;
+        /* Adjust height for desktop */
+    }
+
+    .offer-content h3 {
+        font-size: 1.8rem;
+    }
+
+    .offer-content p {
+        font-size: 1.1rem;
+    }
 }

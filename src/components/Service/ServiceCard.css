@@ -100,7 +100,6 @@
 /* Mobile (max-width: 480px) */
 @media (max-width: 480px) {
     .card {
-        width: 90%;
         height: 12em;
     }
 
@@ -110,6 +109,6 @@
 
     .card::after {
         font-size: 0.8em;
-        height: 2em;
+        height: 3.5em;
     }
 }

@@ -1,6 +1,3 @@
-/* ServicePage.css */
-
-/* General Service Page Styles */
 .service-page-container {
     padding-bottom: 20px;
     text-align: center;
@@ -21,13 +18,12 @@
     background-size: cover;
     background-position: center;
     object-fit: cover;
-    /* Ensure the background image covers the container */
 }
 
 .service-page-content {
     font-size: 1.2rem;
     color: #555;
-    max-width: 800px;
+    width: 80%;
     margin: auto;
 }
 
@@ -89,23 +85,17 @@
 .value-item img,
 .service-page-image {
     max-width: 100%;
-    height: auto;
     border-radius: 10px;
     object-fit: cover;
 }
 
-/* Tablets and Mobile Breakpoints */
-
-/* For Tablets (Max Width 1024px) */
 @media (max-width: 1024px) {
     .service-page-container h1 {
         font-size: 2rem;
-        /* Slightly smaller heading */
     }
 
     .service-page-content {
         font-size: 1.1rem;
-        /* Adjust font size */
     }
 
     .values-list {
@@ -201,144 +191,9 @@
 
     /* Adjust Hero Image Height */
     .service-page-image {
-        height: 40vh;
+        height: 60vh;
         /* Make hero image even smaller on small screens */
         background-position: top;
         /* Keep background image at the top */
-    }
-}
-
-/* Sectors Section */
-.sectors-section {
-    padding: 40px 20px;
-    background-color: #f9f9f9;
-}
-
-.sectors-section h2 {
-    font-size: 28px;
-    color: #2a5d84;
-    margin-bottom: 20px;
-}
-
-.sectors-section .sector-list {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 30px;
-    justify-items: center;
-}
-
-.sectors-section .sector-item {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    transition: transform 0.3s ease;
-}
-
-.sectors-section .sector-item:hover {
-    transform: translateY(-10px);
-}
-
-.sectors-section .sector-item img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
-}
-
-.sectors-section .sector-item h3 {
-    font-size: 18px;
-    color: #333;
-    margin-top: 15px;
-}
-
-.sectors-section .sector-item p {
-    font-size: 14px;
-    color: #777;
-}
-
-/* For Tablets and Mobile */
-@media (max-width: 768px) {
-    .sectors-section .sector-list {
-        grid-template-columns: 1fr 1fr;
-        /* 2 columns on tablets */
-    }
-
-    .sectors-section .sector-item {
-        padding: 15px;
-    }
-
-    .sectors-section .sector-item h3 {
-        font-size: 16px;
-    }
-
-    .sectors-section .sector-item p {
-        font-size: 12px;
-    }
-
-    /* Adjusting Image in Sector Item */
-    .sectors-section .sector-item img {
-        max-width: 90%;
-        height: auto;
-    }
-}
-
-/* For Small Mobile */
-@media (max-width: 480px) {
-    .sectors-section .sector-list {
-        grid-template-columns: 1fr;
-        /* 1 column on small screens */
-    }
-
-    .sectors-section .sector-item {
-        padding: 10px;
-    }
-
-    .sectors-section .sector-item h3 {
-        font-size: 14px;
-    }
-
-    .sectors-section .sector-item p {
-        font-size: 10px;
-    }
-
-    /* Adjusting Image in Sector Item */
-    .sectors-section .sector-item img {
-        max-width: 80%;
-        height: auto;
-    }
-}
-
-/* CTA Button */
-.cta-button {
-    display: inline-block;
-    padding: 15px 30px;
-    background-color: #2a5d84;
-    color: #fff;
-    font-size: 18px;
-    font-weight: bold;
-    text-decoration: none;
-    border-radius: 5px;
-    margin-top: 40px;
-    transition: background-color 0.3s ease;
-}
-
-.cta-button:hover {
-    background-color: #1f4a68;
-}
-
-/* For Tablets and Mobile */
-@media (max-width: 768px) {
-    .cta-button {
-        padding: 12px 25px;
-        font-size: 16px;
-    }
-}
-
-/* For Small Mobile */
-@media (max-width: 480px) {
-    .cta-button {
-        padding: 10px 20px;
-        font-size: 14px;
     }
 }

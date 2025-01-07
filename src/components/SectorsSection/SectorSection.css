@@ -2,7 +2,6 @@
     background-color: #282c34;
     padding-bottom: 40px;
     overflow: hidden;
-    /* Prevent horizontal scrollbars */
 }
 
 .services-main-container {
@@ -15,7 +14,7 @@
 
 /* Row Styling */
 .services-row {
-    padding-top: 1rem;
+    /* padding-top: 1rem; */
     display: flex;
     gap: 15px;
     transition: transform 0.5s ease-in-out;

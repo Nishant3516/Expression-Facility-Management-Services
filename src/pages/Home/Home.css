@@ -23,4 +23,9 @@
     .home h1 {
         font-size: 2rem;
     }
+
+    .heroImg {
+        height: 50vh;
+        object-position: left;
+    }
 }

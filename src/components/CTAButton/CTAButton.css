@@ -2,7 +2,8 @@
     text-align: center;
     width: 50%;
     margin: auto;
-    margin-top: 20px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
 }
 
 .cta-button {
@@ -37,4 +38,68 @@
 .cta-button:hover .cta-icon i {
     transform: scale(1.2);
     width: 30px;
+}
+
+/* Media Queries for Responsiveness */
+
+/* Small Screens (Mobile) */
+@media (max-width: 767px) {
+    .cta-container {
+        width: 80%;
+        /* Increase container width on mobile */
+    }
+
+    .cta-button {
+        width: 100%;
+        /* Make the button take up the full width */
+        padding: 15px 25px;
+        /* Adjust padding for smaller screens */
+        font-size: 14px;
+        /* Slightly smaller text */
+    }
+
+    .cta-icon i {
+        font-size: 16px;
+        /* Adjust icon size for mobile */
+    }
+}
+
+/* Medium Screens (Tablets) */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .cta-container {
+        width: 60%;
+        /* Adjust container width on tablets */
+    }
+
+    .cta-button {
+        width: 70%;
+        /* Adjust button width */
+        font-size: 15px;
+        /* Adjust font size for tablets */
+    }
+
+    .cta-icon i {
+        font-size: 17px;
+        /* Slightly smaller icon size for tablets */
+    }
+}
+
+/* Large Screens (Desktop and above) */
+@media (min-width: 1025px) {
+    .cta-container {
+        width: 50%;
+        /* Maintain 50% width on larger screens */
+    }
+
+    .cta-button {
+        width: 50%;
+        /* Button width is 50% on larger screens */
+        font-size: 16px;
+        /* Default font size for desktop */
+    }
+
+    .cta-icon i {
+        font-size: 18px;
+        /* Icon size for larger screens */
+    }
 }
