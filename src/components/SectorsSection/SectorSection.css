@@ -9,6 +9,7 @@
     width: 80%;
     margin: auto;
     text-align: center;
+    overflow: hidden;
     padding-top: 2rem;
 }
 
@@ -17,10 +18,8 @@
     padding-top: 1rem;
     display: flex;
     gap: 15px;
-    justify-content: center;
-    /* Remove wrapping */
-    width: fit-content;
-    /* Ensures the row only takes up the width of the items */
+    transition: transform 0.5s ease-in-out;
+    will-change: transform;
 }
 
 /* Default: 4 items per row on large screens */
