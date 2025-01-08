@@ -12,37 +12,31 @@
     padding-top: 2rem;
 }
 
-/* Row Styling */
 .services-row {
-    /* padding-top: 1rem; */
     display: flex;
     gap: 15px;
     transition: transform 0.5s ease-in-out;
     will-change: transform;
 }
 
-/* Default: 4 items per row on large screens */
 .services-row>* {
     flex: 0 0 calc(100% / 4);
     box-sizing: border-box;
     margin-bottom: 20px;
 }
 
-/* Tablet (portrait and landscape) - 3 items per row */
 @media (max-width: 1024px) {
     .services-row>* {
         flex: 0 0 calc(100% / 3);
     }
 }
 
-/* Smaller Tablets and Devices (max-width: 768px) - 2 items per row */
 @media (max-width: 768px) {
     .services-row>* {
         flex: 0 0 calc(100% / 2);
     }
 }
 
-/* Mobile Devices (max-width: 480px) - 1 item per row */
 @media (max-width: 480px) {
     .services-row>* {
         flex: 0 0 100%;

@@ -32,30 +32,33 @@ const SectorSection = (props) => {
       );
     }, 3000);
 
-    // Clear interval on component unmount
     return () => clearInterval(interval);
   }, [topServiceData]);
 
   return (
     <div className="services-container">
-    <div className="services-main-container">
-      <h1 style={{ textAlign: "center", marginBottom: "2rem" , color:"white"}}>Sectors We Serve</h1>
-      <div
-        className="services-row"
-        style={{
-          transform: `translateX(-${currentIndex * (100 / itemsPerScroll)}%)`,
-        }}
-      >
-        {topServiceData.map((service, index) => (
-          <SectorCard
-            key={index}
-            title={service.title}
-            description={service.description}
-            backgroundImage={service.icon}
-          />
-        ))}
+      <div className="services-main-container">
+        <h1
+          style={{ textAlign: "center", marginBottom: "2rem", color: "white" }}
+        >
+          Sectors We Serve
+        </h1>
+        <div
+          className="services-row"
+          style={{
+            transform: `translateX(-${currentIndex * (100 / itemsPerScroll)}%)`,
+          }}
+        >
+          {topServiceData.map((service, index) => (
+            <SectorCard
+              key={index}
+              title={service.title}
+              description={service.description}
+              backgroundImage={service.icon}
+            />
+          ))}
+        </div>
       </div>
-    </div>
     </div>
   );
 };
