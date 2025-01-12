@@ -1,11 +1,10 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import "./Header.css";
-import logo from "../../assets/expression_without_bg_logo_cropped.png"; 
+import logo from "../../assets/expression_without_bg_logo_cropped.png";
 
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const menuRef = useRef(null);
   const hamburgerRef = useRef(null);
 
@@ -13,12 +12,8 @@ function Header() {
     setIsMenuOpen(!isMenuOpen);
   };
 
-  const toggleDropdown = () => {
-    setIsDropdownOpen(!isDropdownOpen);
-  };
-
-  const closeDropdown = () => {
-    setIsDropdownOpen(false);
+  const closeMenu = () => {
+    setIsMenuOpen(false);
   };
 
   useEffect(() => {
@@ -30,7 +25,6 @@ function Header() {
         !hamburgerRef.current.contains(event.target)
       ) {
         setIsMenuOpen(false);
-        setIsDropdownOpen(false);
       }
     };
 
@@ -61,48 +55,22 @@ function Header() {
         <nav>
           <ul className={`nav-list ${isMenuOpen ? "open" : ""}`} ref={menuRef}>
             <li>
-              <Link to="/" onClick={() => setIsMenuOpen(false)}>
+              <Link to="/" onClick={closeMenu}>
                 Home
               </Link>
             </li>
             <li>
-              <Link to="/about" onClick={() => setIsMenuOpen(false)}>
+              <Link to="/about" onClick={closeMenu}>
                 About
               </Link>
             </li>
-            <li
-              className="services-menu"
-              onMouseEnter={() => setIsDropdownOpen(true)}
-              onMouseLeave={() => setIsDropdownOpen(false)}
-              onClick={toggleDropdown}
-            >
-              <span>Services</span>
-              <ul
-                className={`dropdown-menu ${isDropdownOpen ? "show" : ""}`}
-                onMouseLeave={closeDropdown}
-              >
-                <li>
-                  <Link to="/service/1">Housekeeping</Link>
-                </li>
-                <li>
-                  <Link to="/service/2security">Security</Link>
-                </li>
-                <li>
-                  <Link to="/service/3">Pest Control</Link>
-                </li>
-                <li>
-                  <Link to="/service/4">Linen & Laundry</Link>
-                </li>
-                <li>
-                  <Link to="/service/5">Bio Medical Waste</Link>
-                </li>
-                <li>
-                  <Link to="/service/6">Ward Boy Services</Link>
-                </li>
-              </ul>
+            <li>
+              <Link to="/services" onClick={closeMenu}>
+                Services
+              </Link>
             </li>
             <li>
-              <Link to="/contact" onClick={() => setIsMenuOpen(false)}>
+              <Link to="/contact" onClick={closeMenu}>
                 Contact
               </Link>
             </li>

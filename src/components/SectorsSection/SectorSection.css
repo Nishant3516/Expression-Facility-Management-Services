@@ -38,7 +38,16 @@
 }
 
 @media (max-width: 480px) {
+    .services-row {
+        display: block;
+    }
+
     .services-row>* {
         flex: 0 0 100%;
+        display: none;
+    }
+
+    .services-row>*:nth-child(1) {
+        display: block;
     }
 }

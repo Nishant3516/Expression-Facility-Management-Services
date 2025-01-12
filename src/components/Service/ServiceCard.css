@@ -1,23 +1,32 @@
 .card {
     position: relative;
-    width: 22em;
-    height: 16.5em;
+    width: 100%;
+    height: 20em;
     box-shadow: 0px 1px 13px rgba(0, 0, 0, 0.2);
     cursor: pointer;
     transition: all 120ms ease-in-out;
     display: flex;
     flex-direction: column;
-    /* Changed to column layout */
     align-items: center;
-    justify-content: flex-start;
+    justify-content: space-around;
     background: #fff;
     padding: 0.5em;
-    padding-bottom: 0.5em;
-    /* Adjusted for better spacing */
+    padding-bottom: 0.1em;
     overflow: hidden;
 }
 
-/* Black Overlay */
+.image {
+    width: 100%;
+    height: 15em;
+    overflow: hidden;
+}
+
+.image img {
+    width: 22vw;
+    height: 100%;
+    object-fit: cover;
+}
+
 .image::before {
     content: "";
     position: absolute;
@@ -26,7 +35,6 @@
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0);
-    /* Initially transparent */
     transition: background 0.3s ease-in-out;
     z-index: 2;
 }
@@ -35,19 +43,16 @@
     background: rgba(0, 0, 0, 0.3);
 }
 
-/* Title */
 .card .title {
     text-align: center;
     font-size: 1.2em;
     font-weight: bold;
     color: #4682B4;
     z-index: 3;
-    margin-top: 0.6em;
-    /* Adjusted margin to push the title down */
+    margin-top: 0.1em;
     transition: opacity 200ms ease-in-out;
 }
 
-/* Learn More Button */
 .card::after {
     content: "Learn more";
     position: absolute;
@@ -70,22 +75,10 @@
     bottom: 0;
 }
 
-.image {
-    width: 100%;
-    height: 80%;
-    position: relative;
-}
-
-.image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
 @media (max-width: 768px) {
     .card {
-        width: 18em;
-        height: 14em;
+        width: 100%;
+        height: 16em;
     }
 
     .card .title {
@@ -95,9 +88,13 @@
     .card::after {
         font-size: 0.9em;
     }
+
+    .image {
+        height: 12em;
+        width: 100%;
+    }
 }
 
-/* Mobile (max-width: 480px) */
 @media (max-width: 480px) {
     .card {
         height: 12em;
@@ -110,5 +107,14 @@
     .card::after {
         font-size: 0.8em;
         height: 3.5em;
+    }
+
+    .image {
+        /* width: 30em; */
+        height: 10em;
+    }
+
+    .image img {
+        width: 100%;
     }
 }

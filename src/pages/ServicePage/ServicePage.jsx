@@ -17,7 +17,6 @@ import resortImage from "../../assets/sectors/resort.jpg";
 import shopImage from "../../assets/sectors/shop.jpg";
 import shoppingImage from "../../assets/sectors/shopping.jpg";
 import CTAButton from "../../components/CTAButton/CTAButton";
-import ServiceCarousel from "../../components/ServiceCarousel/ServiceCarousel";
 
 const ServicePage = () => {
   const { serviceId } = useParams();
@@ -189,7 +188,6 @@ const ServicePage = () => {
         </div>
       </div>
       <SectorsSection list={serviceList} />
-      {/* <ServiceCarousel/> */}
       <CTAButton />
     </div>
   );

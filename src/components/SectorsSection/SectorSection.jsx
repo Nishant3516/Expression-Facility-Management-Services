@@ -23,12 +23,23 @@ const SectorSection = (props) => {
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
-  const itemsPerScroll = 4;
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 480);
+    };
+
+    handleResize(); // Initial check
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) =>
-        prevIndex + itemsPerScroll >= topServiceData.length ? 0 : prevIndex + 1
+        prevIndex + 1 >= topServiceData.length ? 0 : prevIndex + 1
       );
     }, 3000);
 
@@ -45,17 +56,27 @@ const SectorSection = (props) => {
         </h1>
         <div
           className="services-row"
-          style={{
-            transform: `translateX(-${currentIndex * (100 / itemsPerScroll)}%)`,
-          }}
+          style={
+            !isMobile
+              ? {
+                  transform: `translateX(-${currentIndex * (100 / 4)}%)`,
+                }
+              : {}
+          }
         >
           {topServiceData.map((service, index) => (
-            <SectorCard
+            <div
               key={index}
-              title={service.title}
-              description={service.description}
-              backgroundImage={service.icon}
-            />
+              style={{
+                display: isMobile && index !== currentIndex ? "none" : "block",
+              }}
+            >
+              <SectorCard
+                title={service.title}
+                description={service.description}
+                backgroundImage={service.icon}
+              />
+            </div>
           ))}
         </div>
       </div>
