@@ -21,6 +21,8 @@
 
 .offer-container {
     position: relative;
+    width: 90%;
+    margin: auto;
     height: 300px;
     background-size: cover;
     background-position: center;

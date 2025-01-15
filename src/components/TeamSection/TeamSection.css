@@ -1,11 +1,11 @@
-/* TeamSection.css */
 .teamSectionDiv {
     background: linear-gradient(135deg, #00bcd4, #3f51b5);
 }
 
 .team-section {
+    width: 80%;
+    margin: auto;
     padding: 60px 20px;
-    text-align: center;
 }
 
 .team-section h2 {
@@ -31,16 +31,14 @@
     flex-wrap: wrap;
 }
 
-/* Owner Section */
 .owner-section {
     display: grid;
     flex: 0 0 60%;
     grid-template-columns: 40% 60%;
-    /* Image and text side by side on large screens */
     grid-template-rows: auto;
     justify-content: center;
     text-align: left;
-    height: 90%;
+    height: 100%;
     background-color: #ffffff;
     border-radius: 15px;
     box-shadow: 0 20px 15px rgba(0, 0, 0, 0.2);
@@ -55,7 +53,7 @@
 
 .owner-image img {
     width: 100%;
-    height: 91%;
+    height: 90%;
     border-radius: 5%;
     border: 5px solid #3f51b5;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
@@ -64,7 +62,6 @@
 .owner-info {
     display: flex;
     flex-direction: column;
-    /* Ensure vertical stacking of text */
     justify-content: flex-start;
 }
 
@@ -74,13 +71,8 @@
     margin-bottom: 10px;
     text-transform: uppercase;
     letter-spacing: 1px;
+    text-align: center;
     font-weight: bold !important;
-}
-
-.owner-info p {
-    font-size: 18px;
-    color: #555;
-    line-height: 1;
 }
 
 .ownerMainP {
@@ -88,28 +80,71 @@
     color: #555;
     line-height: 1;
     font-weight: bold;
+    text-align: left;
 }
 
-/* For Tablets and Smaller Screens */
+.owner-info p {
+    font-size: 18px;
+    color: #555;
+    line-height: 1;
+    text-align: justify;
+}
+
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 20px;
+    width: 100%;
+    flex: 1;
+}
+
+.team-member {
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
+    padding: 13px 25px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.team-member:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.team-member h3 {
+    font-size: 22px;
+    color: #3f51b5;
+    margin-bottom: 0px;
+}
+
+.team-member p {
+    font-size: 16px;
+    color: #888;
+    margin-bottom: 0;
+    font-weight: bold;
+}
+
+
+
 @media (max-width: 1024px) {
     .owner-section {
         flex: 0 0 100%;
-        /* Full width on tablets */
         text-align: center;
         margin-bottom: 40px;
         grid-template-columns: 1fr;
-        /* Stacking the image and text */
     }
 
     .owner-image {
         width: 100%;
         margin-bottom: 20px;
-        /* Space between image and text */
     }
 
     .owner-info {
         text-align: center;
-        /* Center text for mobile/tablets */
         padding: 0 20px;
     }
 
@@ -123,6 +158,19 @@
 
     .ownerMainP {
         font-size: 16px;
+    }
+
+    .team-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .team-member {
+        width: 100%;
+    }
+
+    .team-member:hover {
+        transform: none;
+        box-shadow: none;
     }
 }
 
@@ -149,6 +197,18 @@
     .ownerMainP {
         font-size: 14px;
     }
+
+    .team-grid {
+        grid-template-columns: 1fr;
+        /* Stack team members in 1 column */
+        gap: 20px;
+    }
+
+    .team-member {
+        padding: 20px;
+        width: 100%;
+        /* Prevent overflow */
+    }
 }
 
 /* For Small Mobile Devices */
@@ -173,78 +233,7 @@
     .ownerMainP {
         font-size: 12px;
     }
-}
 
-/* Team Grid */
-.team-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    /* Default to 3 columns on large screens */
-    gap: 20px;
-    width: 100%;
-    flex: 1;
-}
-
-.team-member {
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
-    padding: 15px 25px;
-    text-align: center;
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
-    width: 100%;
-    box-sizing: border-box;
-    /* Prevent overflow */
-}
-
-.team-member:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-}
-
-.team-member h3 {
-    font-size: 22px;
-    color: #3f51b5;
-    margin-bottom: 0px;
-}
-
-.team-member p {
-    font-size: 16px;
-    color: #888;
-    margin-bottom: 0;
-    font-weight: bold;
-}
-
-/* Adjust grid layout for tablets and smaller devices */
-@media (max-width: 1024px) {
-    .team-grid {
-        grid-template-columns: repeat(2, 1fr);
-        /* 2 columns for tablets */
-    }
-
-    .team-member {
-        width: 100%;
-        /* Ensure no overflow */
-    }
-}
-
-/* For Mobile Devices */
-@media (max-width: 768px) {
-    .team-grid {
-        grid-template-columns: 1fr;
-        /* Stack team members in 1 column */
-        gap: 20px;
-    }
-
-    .team-member {
-        padding: 20px;
-        width: 100%;
-        /* Prevent overflow */
-    }
-}
-
-/* For Small Mobile Devices */
-@media (max-width: 480px) {
     .team-grid {
         grid-template-columns: 1fr;
         /* Stack team members in 1 column */
@@ -262,13 +251,5 @@
 
     .team-member p {
         font-size: 14px;
-    }
-}
-
-/* Disable Hover Effect for Smaller Devices */
-@media (max-width: 1024px) {
-    .team-member:hover {
-        transform: none;
-        box-shadow: none;
     }
 }

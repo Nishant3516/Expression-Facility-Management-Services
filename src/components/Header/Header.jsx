@@ -1,84 +1,92 @@
-import React, { useState, useEffect, useRef } from "react";
-import { Link } from "react-router-dom";
 import "./Header.css";
 import logo from "../../assets/expression_without_bg_logo_cropped.png";
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
-function Header() {
+function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const menuRef = useRef(null);
-  const hamburgerRef = useRef(null);
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
+  };
+
+  const toggleDropdown = () => {
+    setIsDropdownOpen(!isDropdownOpen);
   };
 
   const closeMenu = () => {
     setIsMenuOpen(false);
   };
 
-  useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (
-        menuRef.current &&
-        !menuRef.current.contains(event.target) &&
-        hamburgerRef.current &&
-        !hamburgerRef.current.contains(event.target)
-      ) {
-        setIsMenuOpen(false);
-      }
-    };
-
-    document.addEventListener("mousedown", handleClickOutside);
-
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
-  }, []);
-
   return (
-    <header className="header">
-      <div className="mainHeaderDiv">
+    <div className="headerDiv">
+      <header className="header">
         <div className="logo">
-          <img src={logo} alt="Logo" />
+          <img src={logo} alt="Company Logo" />
         </div>
-
-        <button
-          className="hamburger-menu"
-          onClick={toggleMenu}
-          ref={hamburgerRef}
-        >
-          <span className="bar"></span>
-          <span className="bar"></span>
-          <span className="bar"></span>
-        </button>
-
-        <nav>
-          <ul className={`nav-list ${isMenuOpen ? "open" : ""}`} ref={menuRef}>
-            <li>
+        <nav className={`nav ${isMenuOpen ? "open" : ""}`}>
+          <ul className="nav-list">
+            <li className="nav-item">
               <Link to="/" onClick={closeMenu}>
                 Home
               </Link>
             </li>
-            <li>
+            <li className="nav-item">
               <Link to="/about" onClick={closeMenu}>
                 About
               </Link>
             </li>
-            <li>
-              <Link to="/services" onClick={closeMenu}>
-                Services
-              </Link>
+            <li className="nav-item" onClick={toggleDropdown}>
+              <a href="#">Services</a>
+              {isDropdownOpen && (
+                <ul className="dropdown">
+                  <li>
+                    <Link to="service/1" onClick={closeMenu}>
+                      Housekeeping Services
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to="service/2" onClick={closeMenu}>
+                      Security Services
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to="service/3" onClick={closeMenu}>
+                      Pest Control Services
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to="service/4" onClick={closeMenu}>
+                      Linen & Laundry Services
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to="service/5" onClick={closeMenu}>
+                      Bio Medical Waste
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to="service/6" onClick={closeMenu}>
+                      Ward Boy Services
+                    </Link>
+                  </li>
+                </ul>
+              )}
             </li>
-            <li>
+            <li className="nav-item">
               <Link to="/contact" onClick={closeMenu}>
                 Contact
               </Link>
             </li>
           </ul>
         </nav>
-      </div>
-    </header>
+        <button className="hamburger" onClick={toggleMenu}>
+          ☰
+        </button>
+      </header>
+    </div>
   );
 }
 
-export default Header;
+export default App;

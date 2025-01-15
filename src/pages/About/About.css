@@ -1,10 +1,8 @@
-/* General styles */
+/* Default styling for larger screens (laptops/desktops) */
 .about-us {
-    font-family: Arial, sans-serif;
     color: #333;
 }
 
-/* Hero Section */
 .hero-banner {
     width: 100%;
     height: 100%;
@@ -23,8 +21,7 @@
 }
 
 .company-overview {
-    padding: 60px 20px;
-    text-align: center;
+    padding: 50px 0px 20px 0px;
     width: 80%;
     margin: auto;
 }
@@ -33,20 +30,21 @@
     font-size: 36px;
     color: #007bff;
     margin-bottom: 20px;
+    text-align: center;
 }
 
 .company-overview p {
     font-size: 1.2rem;
     line-height: 1.6;
     margin-bottom: 20px;
+    text-align: justify;
 }
 
-/* Values Section */
 .about-us-content {
     max-width: 1200px;
     margin: 0 auto;
     text-align: center;
-    padding: 60px 20px;
+    padding: 0px 20px;
 }
 
 .about-us-content h2 {
@@ -55,39 +53,38 @@
     margin-bottom: 40px;
 }
 
-.values-list {
+.values-list-about {
     display: grid;
     grid-template-columns: repeat(3, 1fr) !important;
     gap: 30px;
     justify-items: center;
 }
 
-.value-item {
+.value-item-about {
     background-color: #fff;
     border-radius: 10px;
-    box-shadow: 0 20px 15px rgba(44, 33, 76, 0.3);
+    box-shadow: 0px 0px 13px 10px rgba(44, 33, 76, 0.3);
     padding: 30px;
     max-width: 350px;
     text-align: center;
     transition: transform 0.3s ease-in-out;
 }
 
-.value-item:hover {
+.value-item-about:hover {
     transform: translateY(-10px);
 }
 
-.value-icon {
+.value-icon-about {
     font-size: 40px;
     color: #2a5d84;
     margin-bottom: 20px;
 }
 
-.value-item h3 {
+.value-item-about h3 {
     font-size: 24px;
     color: #282c34;
 }
 
-/* Call to Action (if exists) */
 .call-to-action {
     padding: 50px 20px;
     text-align: center;
@@ -111,93 +108,14 @@
     color: white;
 }
 
-/* For Tablets and Smaller Desktops */
-@media (max-width: 1024px) {
-    .company-overview {
-        padding: 40px 20px;
-    }
-
-    .company-overview p {
-        font-size: 1rem;
-    }
-
-    .about-us-content h2 {
-        font-size: 28px;
-    }
-
-    .values-list {
-        grid-template-columns: repeat(2, 1fr) !important;
-    }
-
-
-    .value-item {
-        padding: 20px;
-    }
-
-    .value-item h3 {
-        font-size: 22px;
-    }
-
-    .hero-text h1 {
-        font-size: 2.5rem;
-    }
-
-    .hero-text p {
-        font-size: 1rem;
-    }
-}
-
-/* For Mobile Devices */
-@media (max-width: 768px) {
-    .company-overview {
-        padding: 30px 20px;
-    }
-
-    .company-overview p {
-        font-size: 0.95rem;
-    }
-
-    .about-us-content h2 {
-        font-size: 28px;
-    }
-
-    .values-list {
-        grid-template-columns: 1fr !important;
-        /* 1 column on mobile devices */
-        padding: 0 20px;
-        /* Added padding to prevent items touching edges */
-    }
-
-    .value-item {
-        padding: 15px;
-    }
-
-    .value-item h3 {
-        font-size: 20px;
-    }
-
-    .hero-text h1 {
-        font-size: 2rem;
-    }
-
-    .hero-text p {
-        font-size: 1rem;
-    }
-
-    .cta-button {
-        font-size: 0.9rem;
-        padding: 8px 16px;
-    }
-
-    h2 {
-        font-size: 2rem;
-    }
-}
-
-/* For Small Mobile Devices */
 @media (max-width: 480px) {
     .company-overview {
         padding: 20px 10px;
+        width: 95%;
+    }
+
+    .company-overview h2 {
+        font-size: 24px;
     }
 
     .company-overview p {
@@ -208,33 +126,174 @@
         font-size: 24px;
     }
 
-    .values-list {
+    .values-list-about {
+        display: grid;
         grid-template-columns: 1fr !important;
-        /* Ensure 1 column on small mobile devices */
+        gap: 15px;
     }
 
-    .value-item {
-        padding: 10px;
+    .value-item-about {
+        max-width: 90%;
+        padding: 15px;
     }
 
-    .value-item h3 {
+    .value-icon-about {
+        font-size: 25px;
+    }
+
+    .value-item-about h3 {
         font-size: 18px;
     }
 
-    .value-icon {
-        font-size: 35px;
-    }
-
-    .hero-text h1 {
-        font-size: 1.8rem;
-    }
-
-    .hero-text p {
-        font-size: 0.9rem;
+    .call-to-action {
+        padding: 30px 10px;
     }
 
     .cta-button {
-        padding: 6px 12px;
-        font-size: 0.8rem;
+        padding: 7px 14px;
+        font-size: 0.85rem;
+    }
+}
+
+/* Mobile Devices (portrait) - up to 767px */
+@media (max-width: 767px) {
+    .company-overview {
+        padding: 30px 10px;
+        width: 90%;
+    }
+
+    .company-overview h2 {
+        font-size: 28px;
+    }
+
+    .company-overview p {
+        font-size: 1rem;
+    }
+
+    .about-us-content h2 {
+        font-size: 28px;
+    }
+
+    .values-list-about {
+        display: grid;
+        grid-template-columns: 1fr !important;
+        gap: 20px;
+    }
+
+    .value-item-about {
+        width: 80%;
+        padding: 20px;
+    }
+
+    .value-icon-about {
+        font-size: 30px;
+    }
+
+    .value-item-about h3 {
+        font-size: 20px;
+    }
+
+    .call-to-action {
+        padding: 40px 10px;
+    }
+
+    .cta-button {
+        padding: 8px 15px;
+        font-size: 0.9rem;
+    }
+}
+
+/* Tablets (portrait) and small screens - 768px to 1024px */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .company-overview {
+        padding: 40px 20px;
+        width: 85%;
+    }
+
+    .company-overview h2 {
+        font-size: 32px;
+    }
+
+    .company-overview p {
+        font-size: 1.1rem;
+    }
+
+    .about-us-content h2 {
+        font-size: 32px;
+    }
+
+    .values-list-about {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 25px;
+    }
+
+    .value-item-about {
+        max-width: 80%;
+        padding: 25px;
+    }
+
+    .value-icon-about {
+        font-size: 35px;
+    }
+
+    .value-item-about h3 {
+        font-size: 22px;
+    }
+
+    .call-to-action {
+        padding: 45px 15px;
+    }
+
+    .cta-button {
+        padding: 9px 18px;
+        font-size: 0.95rem;
+    }
+}
+
+/* Medium Screens (laptops) - 1025px to 1280px */
+@media (min-width: 1025px) and (max-width: 1280px) {
+    .company-overview {
+        width: 80%;
+    }
+
+    .company-overview h2 {
+        font-size: 34px;
+    }
+
+    .company-overview p {
+        font-size: 1.2rem;
+    }
+
+    .about-us-content h2 {
+        font-size: 34px;
+    }
+
+    .values-list-about {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr) !important;
+        gap: 30px;
+    }
+
+    .value-item-about {
+        max-width: 320px;
+        padding: 25px;
+    }
+
+    .value-icon-about {
+        font-size: 35px;
+    }
+
+    .value-item-about h3 {
+        font-size: 22px;
+    }
+
+    .call-to-action {
+        padding: 50px 20px;
+    }
+
+    .cta-button {
+        padding: 10px 20px;
+        font-size: 1rem;
     }
 }

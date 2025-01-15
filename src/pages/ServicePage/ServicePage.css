@@ -7,7 +7,6 @@
     font-size: 2.5rem;
     margin-bottom: 20px;
     color: #2a5d84;
-    /* Slightly modify color for better readability */
 }
 
 .service-page-image {
@@ -47,7 +46,6 @@
 .values-list {
     display: grid;
     grid-template-columns: repeat(3, minmax(300px, 1fr));
-    /* Default 3 columns */
     gap: 30px;
     justify-items: stretch;
     justify-content: center;
@@ -81,7 +79,6 @@
     color: #282c34;
 }
 
-/* Image Style Adjustments for All Devices */
 .value-item img,
 .service-page-image {
     max-width: 100%;
