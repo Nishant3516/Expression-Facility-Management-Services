@@ -20,7 +20,7 @@
     font-size: 18px;
     color: white;
     max-width: 800px;
-    margin: 0 auto 40px;
+    margin: 0 auto 20px;
 }
 
 .team-layout {
@@ -52,7 +52,7 @@
 }
 
 .owner-image img {
-    width: 100%;
+    width: 95%;
     height: 90%;
     border-radius: 5%;
     border: 5px solid #3f51b5;
@@ -68,7 +68,6 @@
 .owner-info h3 {
     font-size: 26px;
     color: #3f51b5;
-    margin-bottom: 10px;
     text-transform: uppercase;
     letter-spacing: 1px;
     text-align: center;
@@ -84,6 +83,7 @@
 }
 
 .owner-info p {
+    padding: 0 10px;
     font-size: 18px;
     color: #555;
     line-height: 1;
@@ -153,6 +153,7 @@
     }
 
     .owner-info p {
+        padding: 0;
         font-size: 16px;
     }
 
@@ -174,14 +175,12 @@
     }
 }
 
-/* For Mobile Devices */
 @media (max-width: 768px) {
     .owner-section {
         flex: 0 0 100%;
         margin-bottom: 30px;
         text-align: center;
         grid-template-columns: 1fr;
-        /* 1 column stack */
     }
 
     .owner-image {
@@ -195,29 +194,30 @@
 
     .owner-info p,
     .ownerMainP {
+        padding: 0;
         font-size: 14px;
     }
 
     .team-grid {
         grid-template-columns: 1fr;
-        /* Stack team members in 1 column */
         gap: 20px;
     }
 
     .team-member {
         padding: 20px;
         width: 100%;
-        /* Prevent overflow */
     }
 }
 
-/* For Small Mobile Devices */
 @media (max-width: 480px) {
+    .team-layout {
+        gap: 0px;
+    }
+
     .owner-section {
         flex: 0 0 90%;
         margin-bottom: 20px;
         grid-template-columns: 1fr;
-        /* Ensure 1 column stack */
     }
 
     .owner-image {
@@ -231,18 +231,17 @@
 
     .owner-info p,
     .ownerMainP {
-        font-size: 12px;
+        padding: 0;
+        font-size: 14px;
     }
 
     .team-grid {
         grid-template-columns: 1fr;
-        /* Stack team members in 1 column */
     }
 
     .team-member {
         padding: 15px;
         width: 100%;
-        /* Prevent overflow */
     }
 
     .team-member h3 {

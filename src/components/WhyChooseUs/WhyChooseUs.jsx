@@ -1,5 +1,5 @@
-import React from 'react';
-import './WhyChooseUs.css';  // Import the CSS file
+import React from "react";
+import "./WhyChooseUs.css";
 
 const WhyChooseUs = () => {
   return (
@@ -12,7 +12,9 @@ const WhyChooseUs = () => {
               <i className="fas fa-user-tie"></i>
             </div>
             <h3>Experienced Leadership</h3>
-            <p>12+ years of industry expertise ensuring quality service delivery.</p>
+            <p>
+              12+ years of industry expertise ensuring quality service delivery.
+            </p>
           </div>
 
           <div className="why-choose-item">
@@ -50,6 +52,6 @@ const WhyChooseUs = () => {
       </div>
     </div>
   );
-}
+};
 
 export default WhyChooseUs;
