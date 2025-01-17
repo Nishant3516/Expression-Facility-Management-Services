@@ -11,6 +11,7 @@ import OffersPage from "./pages/OffersPage/OffersPage";
 import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
+  // Main
   return (
     <div className="App">
       <Router>
