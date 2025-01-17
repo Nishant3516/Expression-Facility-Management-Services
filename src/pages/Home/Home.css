@@ -25,7 +25,7 @@
 
 @media (max-width: 1024px) {
     .heroWrapper {
-        background-image: url("../../assets/mobiles/hero_image.png");
+        background-image: url("../../assets/services/mobile/hero_mobile.png");
     }
 }
 
@@ -35,7 +35,7 @@
     }
 
     .heroWrapper {
-        background-image: url("../../assets/mobiles/hero_image.png");
+        background-image: url("../../assets/services/mobile/hero_mobile.png");
         height: 50vh;
         background-position: center;
     }
@@ -43,7 +43,7 @@
 
 @media (max-width: 480px) {
     .heroWrapper {
-        background-image: url("../../assets/mobiles/hero_image.png");
+        background-image: url("../../assets/services/mobile/hero_mobile.png");
         height: 70vh;
         background-position: center;
     }

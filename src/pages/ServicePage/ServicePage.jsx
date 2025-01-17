@@ -7,6 +7,12 @@ import bioMedicalHeroImage from "../../assets/services/biomedical_hero_image.png
 import pestHeroImage from "../../assets/services/pest_hero_image.png";
 import securityHeroImage from "../../assets/services/security_hero_image.png";
 import wardboyHeroImage from "../../assets/services/ward_boy_hero_image.png";
+import housekeepingMobileHeroImage from "../../assets/services/mobile/housekeeping_mobile.png";
+import lanudryMobileHeroImage from "../../assets/services/mobile/linen_mobile.png";
+import bioMedicalMobileHeroImage from "../../assets/services/mobile/biomedical_mobile.png";
+import pestMobileHeroImage from "../../assets/services/mobile/pest_mobile.png";
+import securityMobileHeroImage from "../../assets/services/mobile/security_mobile.png";
+import wardboyMobileHeroImage from "../../assets/services/mobile/wardboy_mobile.png";
 import SectorsSection from "../../components/SectorsSection/SectorSection";
 import healthImage from "../../assets/sectors/health.jpg";
 import buildingImage from "../../assets/sectors/building.jpg";
@@ -20,7 +26,7 @@ import CTAButton from "../../components/CTAButton/CTAButton";
 
 const ServicePage = () => {
   const { serviceId } = useParams();
-
+  const isMobile = window.innerWidth <= 768;
   const serviceData = [
     {
       id: 1,
@@ -33,7 +39,9 @@ const ServicePage = () => {
         { title: "Resorts", icon: resortImage },
         { title: "Home/Office", icon: officeImage },
       ],
-      backgroundImage: housekeepingHeroImage,
+      backgroundImage: isMobile
+        ? housekeepingMobileHeroImage
+        : housekeepingHeroImage,
       features: {
         "fas fa-cogs": "Skilled",
         "fas fa-hand-sparkles": "Adhere to Hygiene",
@@ -55,7 +63,7 @@ const ServicePage = () => {
         { title: "Factory", icon: factoryImage },
         { title: "Construction Building", icon: buildingImage },
       ],
-      backgroundImage: securityHeroImage,
+      backgroundImage: isMobile ? securityMobileHeroImage : securityHeroImage,
       features: {
         "fas fa-cogs": "Tailored Security Solutions",
         "fas fa-headset": "24/7 Emergency Assistance",
@@ -77,7 +85,7 @@ const ServicePage = () => {
         { title: "Factory", icon: factoryImage },
         { title: "Construction Building", icon: buildingImage },
       ],
-      backgroundImage: pestHeroImage,
+      backgroundImage: isMobile ? pestMobileHeroImage : pestHeroImage,
       features: {
         "fas fa-bug": "Ant Control",
         "fas fa-bed": "Bed Bug Removal",
@@ -96,7 +104,7 @@ const ServicePage = () => {
         { title: "Resorts", icon: resortImage },
         { title: "Factory", icon: factoryImage },
       ],
-      backgroundImage: lanudryHeroImage,
+      backgroundImage: isMobile ? lanudryMobileHeroImage : lanudryHeroImage,
       features: {
         "fas fa-cogs": "Systematic Process",
         "fas fa-sync-alt": "Multiple Disinfections",
@@ -118,7 +126,9 @@ const ServicePage = () => {
         { title: "Factory", icon: factoryImage },
         { title: "Construction Building", icon: buildingImage },
       ],
-      backgroundImage: bioMedicalHeroImage,
+      backgroundImage: isMobile
+        ? bioMedicalMobileHeroImage
+        : bioMedicalHeroImage,
       features: {
         "fas fa-trash-alt": "Waste Collection",
         "fas fa-biohazard": "Biohazard Waste",
@@ -132,7 +142,7 @@ const ServicePage = () => {
       description:
         "Our ward boy services provide essential support to healthcare facilities by ensuring smooth operations and enhancing patient care. Our trained staff assist with daily tasks such as patient mobility, delivering meals, maintaining cleanliness in patient rooms, and offering general assistance to healthcare teams. With a focus on compassion and efficiency, our ward boys contribute to a comfortable and well-organized environment for patients and staff. Rely on our dedicated professionals to provide reliable support, allowing your medical team to focus on delivering top-quality healthcare.",
       serviceList: [{ title: "Healthcare", icon: healthImage }],
-      backgroundImage: wardboyHeroImage,
+      backgroundImage: isMobile ? wardboyMobileHeroImage : wardboyHeroImage,
       features: {
         "fas fa-user-tie": "Skilled",
         "fas fa-hand-sparkles": "Adhere to Hygiene",

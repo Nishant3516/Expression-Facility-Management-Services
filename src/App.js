@@ -8,6 +8,7 @@ import About from "./pages/About/About";
 import Contact from "./pages/Contact/Contact";
 import ServicePage from "./pages/ServicePage/ServicePage";
 import OffersPage from "./pages/OffersPage/OffersPage";
+import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <Router>
         <Header />
         <main>
+          <ScrollToTop />
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />

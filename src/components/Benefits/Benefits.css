@@ -1,6 +1,5 @@
 .benefits-container {
     background-color: white;
-    /* background-color: #F5F5F5; */
 }
 
 .benefits-main-container {
@@ -32,7 +31,9 @@
 }
 
 .benefit-card {
-    background-color: #B8E0EB;
+    /* background-color: #282c34; */
+    /* background-color: #B8E0EB; */
+    background-color: rgb(40, 44, 52, 1);
     border: 1px solid #ddd;
     border-radius: 8px;
     padding: 20px;
@@ -53,7 +54,7 @@
 
 .benefit-title {
     font-size: 1.5rem;
-    color: #333;
+    color: white;
     font-weight: bold;
 }
 
