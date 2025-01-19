@@ -25,7 +25,6 @@ const ContactPage = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // Basic validation
     if (
       !formData.companyName ||
       !formData.spokespersonName ||

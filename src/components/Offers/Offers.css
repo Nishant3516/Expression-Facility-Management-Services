@@ -2,6 +2,7 @@
     padding: 50px 20px;
     background-color: #f8f9fa;
     text-align: center;
+    margin: auto;
 }
 
 .offers-section h2 {
@@ -15,7 +16,7 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
-    width: 100%;
+    width: 90%;
     margin: auto;
 }
 
