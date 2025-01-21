@@ -16,11 +16,20 @@ function AboutUs() {
       <section className="company-overview">
         <h2>Who We Are</h2>
         <p>
-          Established in Siliguri, West Bengal, Expression Facility Management Services is a trusted provider
-          of customized and practical solutions in electronic and physical security, housekeeping, pest control,
-          and more. Our commitment to quality and innovation drives us to exceed client expectations at every turn.
+          Established in Siliguri, West Bengal, Expression Facility Management
+          Services is a trusted provider of customized and practical solutions
+          in electronic and physical security, housekeeping, pest control, and
+          more. Our commitment to quality and innovation drives us to exceed
+          client expectations at every turn.
         </p>
-        <p>At Expression Facility Management Service, we take pride in our reputation for excellence. Our team of seasoned professionals is committed to providing innovative and reliable solutions that enhance security, streamline operations, and maintain a safe and hygienic environment. As part of the Expression Group, we manage a diverse portfolio of services across multiple sectors, ensuring a seamless experience for all our clients.
+        <p>
+          At Expression Facility Management Service, we take pride in our
+          reputation for excellence. Our team of seasoned professionals is
+          committed to providing innovative and reliable solutions that enhance
+          security, streamline operations, and maintain a safe and hygienic
+          environment. As part of the Expression Group, we manage a diverse
+          portfolio of services across multiple sectors, ensuring a seamless
+          experience for all our clients.
         </p>
       </section>
       <div className="about-us-content">
