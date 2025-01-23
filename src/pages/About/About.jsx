@@ -1,16 +1,27 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./About.css";
-import aboutImage from "../../assets/about_hero_image.png";
-import QualityStandard from "../../components/QualityStandard/QualityStandard";
-import WhyChooseUs from "../../components/WhyChooseUs/WhyChooseUs";
-import TeamSection from "../../components/TeamSection/TeamSection";
+import desktopImage from "../../assets/about_hero_image.png";
+import mobileImage from "../../assets/about_hero_mobile.png";
 
 function AboutUs() {
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+
+  useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth <= 768);
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   return (
     <div className="about-us">
       <section className="hero-banner">
         <div className="heroImageDiv">
-          <img src={aboutImage} alt="" srcset="" />
+          <img
+            src={isMobile ? mobileImage : desktopImage}
+            alt="About Hero"
+            className="hero-image"
+          />
         </div>
       </section>
       <section className="company-overview">
@@ -57,9 +68,6 @@ function AboutUs() {
           </div>
         </div>
       </div>
-      <QualityStandard />
-      <WhyChooseUs />
-      <TeamSection />
     </div>
   );
 }
