@@ -1,6 +1,6 @@
 import React from "react";
 import "./About.css";
-import aboutImage from "../../assets/about_hero_image.jpg";
+import aboutImage from "../../assets/about_hero_image.png";
 import QualityStandard from "../../components/QualityStandard/QualityStandard";
 import WhyChooseUs from "../../components/WhyChooseUs/WhyChooseUs";
 import TeamSection from "../../components/TeamSection/TeamSection";
