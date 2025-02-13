@@ -12,7 +12,8 @@ function App() {
   };
 
   const toggleDropdown = () => {
-    setIsDropdownOpen(!isDropdownOpen);
+    // setIsDropdownOpen(!isDropdownOpen);
+    setIsDropdownOpen(true);
   };
 
   const closeMenu = () => {
@@ -68,11 +69,21 @@ function App() {
                   </li>
                   <li>
                     <Link to="service/6" onClick={closeMenu}>
-                      Ward Boy Services
+                      Ward Boy (GDA) Services
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to="service/7" onClick={closeMenu}>
+                      Deep Cleaning Services
                     </Link>
                   </li>
                 </ul>
               )}
+            </li>
+            <li className="nav-item">
+              <Link to="/careers" onClick={closeMenu}>
+                Careers
+              </Link>
             </li>
             <li className="nav-item">
               <Link to="/contact" onClick={closeMenu}>

@@ -140,7 +140,7 @@ const ContactPage = () => {
           <iframe
             className="mapIframe"
             title="Google Map Location"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14254.213367079234!2d88.3826951!3d26.72671275!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39e446c1ebc21f35%3A0x270789e76274b8da!2sMatigara%2C%20West%20Bengal!5e0!3m2!1sen!2sin!4v1735197753922!5m2!1sen!2sin"
+            src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3563.699484931285!2d88.3767866754329!3d26.722045876761303!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjbCsDQzJzE5LjQiTiA4OMKwMjInNDUuNyJF!5e0!3m2!1sen!2sin!4v1738489615735!5m2!1sen!2sin"
             style={{ border: 0 }}
             allowFullScreen=""
             referrerpolicy="no-referrer-when-downgrade"

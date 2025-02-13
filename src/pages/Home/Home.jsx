@@ -6,6 +6,7 @@ import Benefits from "../../components/Benefits/Benefits";
 import SectorsSection from "../../components/Service/ServiceSection";
 import ClientSection from "../../components/ClientSection/ClientSection";
 import Offers from "../../components/Offers/Offers";
+import TopServices from "../../components/TopServices/TopServices";
 
 function Home() {
   return (
@@ -13,7 +14,8 @@ function Home() {
       <div className="heroWrapper"></div>
       <div>
         <StatsContainer />
-        <SectorsSection />
+        {/* <SectorsSection /> */}
+        <TopServices />
         <Benefits />
         <Services />
         <ClientSection />

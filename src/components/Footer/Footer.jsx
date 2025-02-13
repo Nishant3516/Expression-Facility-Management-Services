@@ -30,7 +30,7 @@ const Footer = () => {
               <a href="about">About Us</a>
             </li>
             <li>
-              <a href="services">Services</a>
+              <a href="careers">Careers</a>
             </li>
             <li>
               <a href="contact">Contact</a>
@@ -56,7 +56,7 @@ const Footer = () => {
           <h4>Email-Us</h4>
           <p>Email: expressionfacility2023@gmail.com</p>
           <h4>Call Now</h4>
-          <p>Phone: +91 96350 67373</p>
+          <p>Phone: +91 96350 67474</p>
         </div>
       </div>
     </footer>

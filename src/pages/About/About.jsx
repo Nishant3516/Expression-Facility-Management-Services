@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./About.css";
 import desktopImage from "../../assets/about_hero_image.png";
 import mobileImage from "../../assets/about_hero_mobile.png";
+import TeamSection from "../../components/TeamSection/TeamSection";
 
 function AboutUs() {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
@@ -68,6 +69,7 @@ function AboutUs() {
           </div>
         </div>
       </div>
+      <TeamSection />
     </div>
   );
 }

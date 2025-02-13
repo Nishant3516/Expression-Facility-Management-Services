@@ -138,7 +138,7 @@ const ServicePage = () => {
     },
     {
       id: 6,
-      title: "Ward Boy Services",
+      title: "Ward Boy (GDA) Services",
       description:
         "Our ward boy services provide essential support to healthcare facilities by ensuring smooth operations and enhancing patient care. Our trained staff assist with daily tasks such as patient mobility, delivering meals, maintaining cleanliness in patient rooms, and offering general assistance to healthcare teams. With a focus on compassion and efficiency, our ward boys contribute to a comfortable and well-organized environment for patients and staff. Rely on our dedicated professionals to provide reliable support, allowing your medical team to focus on delivering top-quality healthcare.",
       serviceList: [{ title: "Healthcare", icon: healthImage }],

@@ -9,6 +9,7 @@ import Contact from "./pages/Contact/Contact";
 import ServicePage from "./pages/ServicePage/ServicePage";
 import OffersPage from "./pages/OffersPage/OffersPage";
 import ScrollToTop from "./components/ScrollToTop";
+import CareerPage from "./pages/Careers/Careers";
 
 function App() {
   // Main
@@ -22,6 +23,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/careers" element={<CareerPage />} />
             <Route path="/offers" element={<OffersPage />} />
             <Route path="/service/:serviceId" element={<ServicePage />} />
           </Routes>

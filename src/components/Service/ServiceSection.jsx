@@ -15,7 +15,8 @@ const servicesData = [
   { id: 3, title: "Pest Control Services", backgroundImage: pestImage },
   { id: 4, title: "Linen & Laundry Services", backgroundImage: laundryImage },
   { id: 5, title: "Bio Medical Waste", backgroundImage: biomedicalImage },
-  { id: 6, title: "Ward Boy Services", backgroundImage: wardboyImage },
+  { id: 6, title: "Ward Boy (GDA) Services", backgroundImage: wardboyImage },
+  { id: 6, title: "Deep Cleaning Services", backgroundImage: wardboyImage },
 ];
 
 function ServiceSection() {
