@@ -56,7 +56,7 @@ const Footer = () => {
           <h4>Email-Us</h4>
           <p>Email: expressionfacility2023@gmail.com</p>
           <h4>Call Now</h4>
-          <p>Phone: +91 96350 67474</p>
+          <p>Phone: +91 96350 67373, +91 96350 67474</p>
         </div>
       </div>
     </footer>

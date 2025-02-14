@@ -199,6 +199,11 @@ const ServicePage = () => {
       </div>
       <SectorsSection list={serviceList} />
       <CTAButton />
+      {/* {service.title === "House Keeping Services" && (
+        <div className="second-image" style={{ width: "100%", height: "80vh" }}>
+          <img src={housekeepingMobileHeroImage} alt="" />
+        </div>
+      )} */}
     </div>
   );
 };
