@@ -1,5 +1,5 @@
 import React from "react";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import "./ServicePage.css";
 import housekeepingHeroImage from "../../assets/services/house_kepping_hero_image.png";
 import lanudryHeroImage from "../../assets/services/laundry_hero_image.png";
@@ -200,19 +200,21 @@ const ServicePage = () => {
         </div>
       </div>
       <SectorsSection list={serviceList} />
-      <CTAButton />
+      {service.title !== "House Keeping Services" && <CTAButton />}
       {service.title === "House Keeping Services" && (
-        <div className="second-image-div">
-          <img
-            src={
-              isMobile
-                ? housekeepingSecondMobileHeroImage
-                : housekeepingSecondImage
-            }
-            alt=""
-            className="second-image"
-          />
-        </div>
+        <Link to="/contact">
+          <div className="second-image-div">
+            <img
+              src={
+                isMobile
+                  ? housekeepingSecondMobileHeroImage
+                  : housekeepingSecondImage
+              }
+              alt=""
+              className="second-image"
+            />
+          </div>
+        </Link>
       )}
     </div>
   );
