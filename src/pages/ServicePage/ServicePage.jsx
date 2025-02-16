@@ -8,6 +8,8 @@ import pestHeroImage from "../../assets/services/pest_hero_image.png";
 import securityHeroImage from "../../assets/services/security_hero_image.png";
 import wardboyHeroImage from "../../assets/services/ward_boy_hero_image.png";
 import housekeepingMobileHeroImage from "../../assets/services/mobile/housekeeping_mobile.png";
+import housekeepingSecondImage from "../../assets/services/housekeeping_second_image.png";
+import housekeepingSecondMobileHeroImage from "../../assets/services/mobile/housekeeping_second_mobile.png";
 import lanudryMobileHeroImage from "../../assets/services/mobile/linen_mobile.png";
 import bioMedicalMobileHeroImage from "../../assets/services/mobile/biomedical_mobile.png";
 import pestMobileHeroImage from "../../assets/services/mobile/pest_mobile.png";
@@ -199,11 +201,19 @@ const ServicePage = () => {
       </div>
       <SectorsSection list={serviceList} />
       <CTAButton />
-      {/* {service.title === "House Keeping Services" && (
-        <div className="second-image" style={{ width: "100%", height: "80vh" }}>
-          <img src={housekeepingMobileHeroImage} alt="" />
+      {service.title === "House Keeping Services" && (
+        <div className="second-image-div">
+          <img
+            src={
+              isMobile
+                ? housekeepingSecondMobileHeroImage
+                : housekeepingSecondImage
+            }
+            alt=""
+            className="second-image"
+          />
         </div>
-      )} */}
+      )}
     </div>
   );
 };

@@ -1,5 +1,5 @@
 .service-page-container {
-    padding-bottom: 20px;
+    /* padding-bottom: 20px; */
     text-align: center;
 }
 
@@ -83,6 +83,20 @@
     border-radius: 10px;
     object-fit: cover;
 }
+
+.second-image-div {
+    width: 100vw;
+    height: 80vh;
+    overflow: hidden;
+    margin-bottom: 0;
+}
+
+.second-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 
 @media (max-width: 1024px) {
     .service-page-container h1 {

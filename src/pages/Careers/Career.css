@@ -1,16 +1,13 @@
-/* General Page Styling */
 .career-page {
-    max-width: 900px;
+    width: 80%;
     margin: 50px auto;
     padding: 30px;
-    font-family: "Poppins", sans-serif;
     background: linear-gradient(135deg, #f9f9ff, #eef2ff);
     border-radius: 12px;
     box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15);
     text-align: center;
 }
 
-/* Career Content Section */
 .career-content {
     margin-bottom: 30px;
 }
@@ -29,13 +26,13 @@
     line-height: 1.5;
 }
 
-/* Application Form */
 .application-form {
     background: white;
-    padding: 25px;
+    padding: 25px 0;
     border-radius: 12px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     text-align: left;
+    width: 100%;
 }
 
 .application-form h2 {
@@ -45,8 +42,9 @@
     font-size: 1.8rem;
 }
 
-/* Form Styling */
 .form-group {
+    width: 90%;
+    margin: auto;
     margin-bottom: 20px;
 }
 
@@ -59,13 +57,15 @@ label {
 
 input,
 textarea {
-    width: 100%;
+    width: 97%;
     padding: 12px;
     border: 2px solid #ddd;
     border-radius: 6px;
     font-size: 1rem;
     transition: 0.3s;
     background: #f8f9ff;
+    /* margin: 0 auto; */
+    display: block;
 }
 
 input:focus,
@@ -80,9 +80,8 @@ textarea {
     min-height: 120px;
 }
 
-/* Submit Button */
 .submit-btn {
-    width: 100%;
+    width: 90%;
     padding: 14px;
     background: linear-gradient(135deg, #007bff, #0056b3);
     color: white;
@@ -92,6 +91,8 @@ textarea {
     border-radius: 6px;
     cursor: pointer;
     transition: 0.3s;
+    margin: 0 auto;
+    display: block;
 }
 
 .submit-btn:hover {
@@ -99,13 +100,144 @@ textarea {
     transform: translateY(-2px);
 }
 
-/* Responsive Design */
-@media (max-width: 600px) {
+/* For screens larger than 1024px (desktop and up) */
+@media (min-width: 1024px) {
     .career-page {
-        padding: 20px;
+        width: 80%;
+        margin: 50px auto;
+        padding: 30px;
+    }
+
+    .career-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .career-content p {
+        font-size: 1.2rem;
     }
 
     .application-form {
+        width: 100%;
+    }
+
+    .application-form h2 {
+        font-size: 1.8rem;
+    }
+
+    .form-group {
+        width: 90%;
+    }
+
+    .submit-btn {
+        width: 90%;
+        padding: 14px;
+        font-size: 1.2rem;
+    }
+}
+
+/* For tablet screens (between 768px and 1023px) */
+@media (max-width: 1023px) and (min-width: 768px) {
+    .career-page {
+        width: 90%;
+        padding: 25px;
+    }
+
+    .career-content h1 {
+        font-size: 2rem;
+    }
+
+    .career-content p {
+        font-size: 1.1rem;
+    }
+
+    .application-form {
+        width: 100%;
+        padding: 20px 0;
+    }
+
+    .application-form h2 {
+        font-size: 1.6rem;
+    }
+
+    .form-group {
+        width: 85%;
+    }
+
+    .submit-btn {
+        width: 85%;
+        padding: 12px;
+        font-size: 1.1rem;
+    }
+}
+
+/* For mobile screens (between 480px and 767px) */
+@media (max-width: 767px) and (min-width: 480px) {
+    .career-page {
+        width: 95%;
         padding: 20px;
+    }
+
+    .career-content h1 {
+        font-size: 1.8rem;
+    }
+
+    .career-content p {
+        font-size: 1rem;
+    }
+
+    .application-form {
+        width: 100%;
+        padding: 15px 0;
+    }
+
+    .application-form h2 {
+        font-size: 1.4rem;
+    }
+
+    .form-group {
+        width: 90%;
+    }
+
+    .submit-btn {
+        width: 90%;
+        padding: 10px;
+        font-size: 1rem;
+    }
+}
+
+/* For small mobile screens (below 480px) */
+@media (max-width: 479px) {
+    .career-page {
+        width: 80%;
+        padding: 15px;
+    }
+
+    .career-content h1 {
+        font-size: 1.6rem;
+    }
+
+    .career-content p {
+        font-size: 0.95rem;
+    }
+
+    .application-form {
+        width: 83%;
+        padding: 25px;
+    }
+
+    .application-form h2 {
+        font-size: 1.2rem;
+    }
+
+    .form-group {
+        width: 90%;
+        text-align: left;
+        margin-left: 0;
+    }
+
+    .submit-btn {
+        width: 100%;
+        padding: 12px;
+        font-size: 1rem;
     }
 }
