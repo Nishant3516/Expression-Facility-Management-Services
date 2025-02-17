@@ -57,7 +57,7 @@ const ContactPage = () => {
         setStatus("Message sent successfully!");
         setFormData({
           companyName: "",
-          spokespersonName: "",
+          spokesperson_name: "",
           phoneNumber: "",
           email: "",
           message: "",

@@ -24,7 +24,9 @@ function App() {
     <div className="headerDiv">
       <header className="header">
         <div className="logo">
-          <img src={logo} alt="Company Logo" />
+          <Link to="/">
+            <img src={logo} alt="Company Logo" />
+          </Link>
         </div>
         <nav className={`nav ${isMenuOpen ? "open" : ""}`}>
           <ul className="nav-list">

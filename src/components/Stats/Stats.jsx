@@ -1,6 +1,5 @@
 import React from "react";
 import "./Stats.css";
-import tempLogo from "../../assets/expression_without_bg_logo.png";
 
 const MedicalAchievementHealthProtection = () => {
   return (

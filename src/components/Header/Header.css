@@ -14,11 +14,11 @@ body {
 
 .header {
     width: 80%;
-    margin: auto;
+    margin: 0 auto auto auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 5px 0px;
+    padding: 5px 0px 0px 0px;
 }
 
 .logo img {

@@ -16,18 +16,20 @@
 .heroWrapper {
     width: 100%;
     height: 85vh;
-    background-image: url("../../assets/hero_image.png");
-    background-size: cover;
-    background-size: 100% 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    object-fit: cover;
+}
+
+.heroWrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
 
-@media (max-width: 1024px) {
-    .heroWrapper {
-        background-image: url("../../assets/services/mobile/hero_mobile.png");
-    }
-}
 
 @media (max-width: 768px) {
     .home h1 {
@@ -35,17 +37,13 @@
     }
 
     .heroWrapper {
-        background-image: url("../../assets/services/mobile/hero_mobile.png");
         height: 50vh;
-        background-position: center;
     }
 }
 
 @media (max-width: 480px) {
     .heroWrapper {
-        background-image: url("../../assets/services/mobile/hero_mobile.png");
-        height: 70vh;
-        background-position: center;
+        height: 80vh;
     }
 }
 

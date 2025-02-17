@@ -17,16 +17,10 @@
     color: white;
 }
 
-.header-content img {
-    height: 15vh;
-    width: 20vw;
-    margin-right: 30px;
-    border-radius: 50px 50px 50px 50px;
-}
-
 .header-content h1 {
     margin-right: 60px;
     font-size: 2rem;
+    line-height: 4rem;
     text-align: start;
     color: #2C2A52;
 }
@@ -46,6 +40,7 @@
     font-size: 52px;
     font-weight: bold;
     color: #4682B4;
+    line-height: 4rem;
 }
 
 .stat-label {
