@@ -10,21 +10,21 @@ const services = [
     id: 1,
     title: "House Keeping Services",
     description:
-      "Our professional housekeeping services ensure a clean, safe, and comfortable environment for your healthcare facility. With a focus on hygiene and patient care, we provide thorough cleaning of all areas, including patient rooms, common spaces, and medical equipment. Our experienced team follows strict protocols to meet industry standards, ensuring a spotless and sanitized environment. Whether it's daily upkeep or deep cleaning, our services contribute to a healthier and more pleasant atmosphere for both patients and staff. Trust us to maintain your facility's cleanliness with reliability and efficiency.",
+      "Our housekeeping services ensure a clean, safe environment for your healthcare facility. We clean patient rooms, common areas, and medical equipment, following strict industry standards. Whether daily upkeep or deep cleaning, our team delivers reliable, efficient cleanliness for a healthier atmosphere.",
     image: housekeepingImage,
   },
   {
     id: 2,
     title: "Security Services",
     description:
-      "Our top-tier security services are designed to provide a safe and secure environment for your healthcare facility. With highly trained security personnel, we offer 24/7 surveillance, access control, and emergency response. We prioritize patient and staff safety by implementing customized security plans that align with your facility's needs. Our team ensures the protection of both property and personnel while maintaining a welcoming atmosphere. Rely on our expert security services to safeguard your healthcare environment with professionalism and discretion.",
+      "Our top-tier security services provide a safe environment for your healthcare facility. With trained personnel, 24/7 surveillance, access control, and emergency response, we prioritize the safety of patients and staff. Our customized security plans protect both property and personnel while maintaining a welcoming atmosphere. Trust us to safeguard your facility with professionalism and discretion.",
     image: securityImage,
   },
   {
     id: 6,
     title: "Ward Boy (GDA) Services",
     description:
-      "Our ward boy services provide essential support to healthcare facilities by ensuring smooth operations and enhancing patient care. Our trained staff assist with daily tasks such as patient mobility, delivering meals, maintaining cleanliness in patient rooms, and offering general assistance to healthcare teams. With a focus on compassion and efficiency, our ward boys contribute to a comfortable and well-organized environment for patients and staff. Rely on our dedicated professionals to provide reliable support, allowing your medical team to focus on delivering top-quality healthcare.",
+      "Our ward boy services provide essential support to healthcare facilities by assisting with tasks like patient mobility, meal delivery, room cleanliness, and general help to healthcare teams. With a focus on compassion and efficiency, our trained staff contribute to a comfortable, well-organized environment. Trust our professionals to support your medical team, allowing them to focus on delivering quality healthcare.",
     image: wardboyImage,
   },
 ];
@@ -53,6 +53,15 @@ const TopServices = () => {
               <div className="service-description">
                 <h3>{service.title}</h3>
                 <p>{service.description}</p>
+                <button
+                  className="learn-more-button"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    navigate(`/service/${service.id}`);
+                  }}
+                >
+                  Learn More
+                </button>
               </div>
             </div>
           ))}

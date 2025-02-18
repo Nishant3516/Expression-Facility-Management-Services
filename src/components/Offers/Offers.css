@@ -76,7 +76,7 @@
     padding: 10px 20px;
     font-size: 1.2rem;
     color: white;
-    background-color: #007bff;
+    background-color: #282c34;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -84,5 +84,5 @@
 }
 
 .see-more-button:hover {
-    background-color: #0056b3;
+    background-color: #ff7f00;
 }

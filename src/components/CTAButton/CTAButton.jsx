@@ -1,6 +1,6 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import './CTAButton.css';
+import React from "react";
+import { Link } from "react-router-dom";
+import "./CTAButton.css";
 
 function CTAButton() {
   return (
@@ -9,7 +9,7 @@ function CTAButton() {
         <button className="cta-button">
           Know more
           <span className="cta-icon">
-            <i className="fas fa-arrow-right"></i> {/* Font Awesome Icon */}
+            <i className="fas fa-arrow-right"></i>
           </span>
         </button>
       </Link>

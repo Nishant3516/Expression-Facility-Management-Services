@@ -87,6 +87,7 @@
 .second-image-div {
     width: 100vw;
     height: 90vh;
+    /* padding: 20px 0; */
     overflow: hidden;
     margin-bottom: 0;
 }
