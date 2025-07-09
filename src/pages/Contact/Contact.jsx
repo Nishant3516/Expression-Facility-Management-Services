@@ -42,6 +42,7 @@ const ContactPage = () => {
         spokesperson_name: formData.spokespersonName,
         phone_number: formData.phoneNumber,
         from_email: formData.email,
+        reply_to: formData.email,
         message: formData.message,
       };
 
