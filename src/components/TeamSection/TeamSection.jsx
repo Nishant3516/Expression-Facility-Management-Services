@@ -1,6 +1,6 @@
 import React from "react";
 import "./TeamSection.css";
-import ownerImage from "../../assets/owner/khusbu__owner.jpg";
+import ownerImage from "../../assets/owner/gyan_prakash.jpg";
 
 const TeamSection = () => {
   return (
@@ -16,35 +16,39 @@ const TeamSection = () => {
         <div className="team-layout">
           <div className="owner-section">
             <div className="owner-image">
-              <img src={ownerImage} alt="Khushbu Kumari" />
+              <img src={ownerImage} alt="Adv. Gyan Prakash" />
             </div>
             <div className="owner-info">
-              <h3>Khushbu Kumari</h3>
-              <p className="ownerMainP">Founder & CEO</p>
+              <h3>Adv. Gyan Prakash</h3>
+              <p className="ownerMainP">Chairman</p>
               <p>
-                The company was founded by Khushbu Kumari, an energetic and
-                driven businesswoman. Khushbu holds a degree in Economics
-                (Honours), demonstrating a strong foundation in economic
-                principles, and has also completed DMLT (Diploma in Medical
-                Laboratory Technology), showcasing her diverse skill set and
-                knowledge. Her dynamic approach and enthusiasm have been key
-                factors in the company's growth and success.
+                Expression Facility is a dynamic and innovative company
+                established in 2022 by Adv. Gyan Prakash, a distinguished legal
+                professional with a Master in Law from Kolkata University. With
+                a vision to revolutionize Facility sector, our company is
+                committed to delivering exceptional services and solutions that
+                meet the evolving needs of our clients.
+              </p>
+              <p>
+                Adv. Gyan Prakash serves as the Chairman of Expression. Known
+                for his energetic approach and strategic foresight, he is
+                dedicated to fostering a culture of excellence and integrity
+                within the organization. His extensive legal background equips
+                him with unique insights that guide the company's operations and
+                growth.
               </p>
             </div>
           </div>
 
           <div className="team-grid">
             <div className="team-member">
-              <h3>Shyam Prasad</h3>
+              <h3>Mr Kamal Kant Bhagat</h3>
               <p>[Branch Head]</p>
             </div>
+
             <div className="team-member">
-              <h3>Kamal Kant Bhagat</h3>
-              <p>[Operations Manager]</p>
-            </div>
-            <div className="team-member">
-              <h3>Mithun Bhagat</h3>
-              <p>[Linen Management Specialist]</p>
+              <h3>Miss Anwara</h3>
+              <p>[Operations & Training Head]</p>
             </div>
           </div>
         </div>
