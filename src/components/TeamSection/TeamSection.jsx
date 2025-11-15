@@ -23,7 +23,7 @@ const TeamSection = () => {
               <p className="ownerMainP">Chairman</p>
               <p>
                 Expression Facility is a dynamic and innovative company
-                established in 2022 by Adv. Gyan Prakash, a distinguished legal
+                established by Adv. Gyan Prakash, a distinguished legal
                 professional with a Master in Law from Kolkata University. With
                 a vision to revolutionize Facility sector, our company is
                 committed to delivering exceptional services and solutions that
@@ -47,7 +47,7 @@ const TeamSection = () => {
             </div>
 
             <div className="team-member">
-              <h3>Miss Anwara</h3>
+              <h3>Miss Anwara Khatun</h3>
               <p>[Operations & Training Head]</p>
             </div>
           </div>

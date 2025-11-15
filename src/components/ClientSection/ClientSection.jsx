@@ -11,20 +11,24 @@ import pamLogo from "../../assets/clients/pam_logo.png";
 import mayoorLogo from "../../assets/clients/mayoor_logo.png";
 import mathurLogo from "../../assets/clients/mathura.png";
 import siliguriClubLogo from "../../assets/clients/siliguri_club.png";
+import lionsClubLogo from "../../assets/clients/lions_club.png";
+import mukherjeeHospital from "../../assets/clients/mukherjee.png";
 
 const ClientSection = () => {
   const clients = [
     // neotiaLogo,
     fortuneLogo,
     thalamusLogo,
-    sacredLogo,
     kinsLogo,
-    fordLogo,
-    varshaLogo,
-    pamLogo,
-    mayoorLogo,
-    mathurLogo,
     siliguriClubLogo,
+    fordLogo,
+    mathurLogo,
+    varshaLogo,
+    lionsClubLogo,
+    mayoorLogo,
+    pamLogo,
+    sacredLogo,
+    mukherjeeHospital,
   ];
 
   return (
