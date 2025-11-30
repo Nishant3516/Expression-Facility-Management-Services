@@ -1,0 +1,151 @@
+.carousel-wrapper {
+    width: 100%;
+    height: 80%;
+    box-sizing: border-box;
+}
+
+.carousel {
+    position: relative;
+    width: 80%;
+    margin: 52px auto;
+    overflow: hidden;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+}
+
+.carousel-inner {
+    width: 100%;
+    position: relative;
+}
+
+.carousel-image {
+    width: 100%;
+    height: 80%;
+    display: block;
+    object-fit: cover;
+}
+
+/* Navigation buttons (styled) */
+.nav-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border: none;
+    background: rgba(0, 0, 0, 0.35);
+    color: #fff;
+    padding: 0.8rem 1.2rem;
+    /* wider rectangle */
+    cursor: pointer;
+    font-size: 1.8rem;
+    border-radius: 8px;
+    /* small rounding, not fully round */
+    z-index: 3;
+    transition: 0.25s ease;
+}
+
+.nav-button:hover {
+    background: rgba(0, 0, 0, 0.6);
+    transform: translateY(-50%) scale(1.05);
+}
+
+
+.nav-button.prev {
+    left: 15px;
+}
+
+.nav-button.next {
+    right: 15px;
+}
+
+/* Dots now ON TOP OF the image, bottom-centered */
+.dots {
+    position: absolute;
+    bottom: 12px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 4;
+}
+
+.dot {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin: 0 5px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.6);
+    cursor: pointer;
+    transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.dot.active {
+    background: #ff7f00;
+    transform: scale(1.3);
+}
+
+@media (max-width: 768px) {
+    .carousel-wrapper {
+        width: 100%;
+        height: auto;
+        /* Let height adapt naturally */
+    }
+
+    .carousel {
+        width: 100%;
+        /* Full width on mobile */
+        margin: 20px auto;
+        /* Less vertical margin */
+        border-radius: 6px;
+    }
+
+    .carousel-image {
+        height: 260px;
+        /* Better fixed mobile height */
+        object-fit: cover;
+        /* Keep clean crop */
+    }
+
+    /* Navigation buttons more tap-friendly */
+    .nav-button {
+        padding: 0.6rem 0.9rem;
+        font-size: 1.4rem;
+        border-radius: 6px;
+    }
+
+    .nav-button.prev {
+        left: 8px;
+    }
+
+    .nav-button.next {
+        right: 8px;
+    }
+
+    /* Dots better spaced and easier to tap */
+    .dots {
+        bottom: 8px;
+    }
+
+    .dot {
+        width: 10px;
+        height: 10px;
+        margin: 0 4px;
+    }
+}
+
+/* Extra-small phones (iPhone SE, etc.) */
+@media (max-width: 480px) {
+    .carousel-image {
+        height: 220px;
+    }
+
+    .nav-button {
+        padding: 0.5rem 0.8rem;
+        font-size: 1.2rem;
+    }
+
+    .dot {
+        width: 9px;
+        height: 9px;
+        margin: 0 3px;
+    }
+}

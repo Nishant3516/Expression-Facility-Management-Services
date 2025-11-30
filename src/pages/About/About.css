@@ -3,18 +3,18 @@
 }
 
 .hero-banner {
-    width: 100%;
-    height: 90vh;
+    width: 100vw;
+    /* height: 90vh; */
 }
 
 .heroImageDiv {
-    width: 100%;
-    height: 90vh;
+    width: 100vw;
+    /* height: 90vh; */
 }
 
 .heroImageDiv img {
-    width: 100%;
-    height: 90vh;
+    width: 100vw;
+    /* height: 90vh; */
     object-fit: cover;
     display: block;
 }

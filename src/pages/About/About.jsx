@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from "react";
 import "./About.css";
-import desktopImage from "../../assets/about_hero_image.png";
+// import desktopImage from "../../assets/about_hero_image.png";
+import desktopImage from "../../assets/about_us_banner.png";
 import mobileImage from "../../assets/about_hero_mobile.png";
 import TeamSection from "../../components/TeamSection/TeamSection";
+import TeamCarousel from "../../components/TeamCarousel/team_carousel";
 
 function AboutUs() {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
@@ -70,6 +72,7 @@ function AboutUs() {
         </div>
       </div>
       <TeamSection />
+      <TeamCarousel />
     </div>
   );
 }
