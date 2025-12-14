@@ -4,9 +4,15 @@ import "./team_carousel.css";
 import carousel1Image from "../../assets/about/carousel1.jpg";
 import carousel2Image from "../../assets/about/carousel2.jpg";
 import carousel3Image from "../../assets/about/carousel3.jpg";
+import carousel4Image from "../../assets/about/carousel4.jpg";
 
 const TeamCarousel = () => {
-  const images = [carousel1Image, carousel2Image, carousel3Image];
+  const images = [
+    carousel1Image,
+    carousel2Image,
+    carousel3Image,
+    carousel4Image,
+  ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
 
