@@ -16,7 +16,11 @@ function Home() {
   return (
     <div className="homeDiv">
       <div className="heroWrapper">
-        <img src={isMobile ? heroMobileImage : heroImage} alt="" />
+        <img
+          src={isMobile ? heroMobileImage : heroImage}
+          alt=""
+          loading="lazy"
+        />
       </div>
       <div>
         <StatsContainer />
